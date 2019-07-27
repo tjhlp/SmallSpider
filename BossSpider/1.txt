@@ -201,12 +201,12 @@
                                     <a                                              href="/c101280600/a_%E5%90%8E%E6%B5%B7/?query=python"
                                             
                                     ka="sel-area-8">后海</a>
-                                    <a                                              href="/c101280600/a_%E8%BD%A6%E5%85%AC%E5%BA%99/?query=python"
-                                            
-                                    ka="sel-area-9">车公庙</a>
                                     <a                                              href="/c101280600/a_%E6%A2%85%E6%9E%97/?query=python"
                                             
-                                    ka="sel-area-10">梅林</a>
+                                    ka="sel-area-9">梅林</a>
+                                    <a                                              href="/c101280600/a_%E8%BD%A6%E5%85%AC%E5%BA%99/?query=python"
+                                            
+                                    ka="sel-area-10">车公庙</a>
                                     <a                                              href="/c101280600/a_%E5%89%8D%E6%B5%B7/?query=python"
                                             
                                     ka="sel-area-11">前海</a>
@@ -243,27 +243,27 @@
                                     <a                                              href="/c101280600/a_%E7%9F%B3%E5%8E%A6/?query=python"
                                             
                                     ka="sel-area-22">石厦</a>
+                                    <a                                              href="/c101280600/a_%E5%8D%97%E6%B2%B9/?query=python"
+                                            
+                                    ka="sel-area-23">南油</a>
                                     <a                                              href="/c101280600/a_%E5%8D%8E%E5%BC%BA%E5%8C%97/?query=python"
                                             
-                                    ka="sel-area-23">华强北</a>
-                                    <a                                              href="/c101280600/a_%E4%B8%87%E7%A7%91/?query=python"
-                                            
-                                    ka="sel-area-24">万科</a>
+                                    ka="sel-area-24">华强北</a>
                                     <a                                              href="/c101280600/a_%E6%A8%AA%E5%B2%97/?query=python"
                                             
                                     ka="sel-area-25">横岗</a>
-                                    <a                                              href="/c101280600/a_%E5%8D%97%E6%B2%B9/?query=python"
+                                    <a                                              href="/c101280600/a_%E4%B8%87%E7%A7%91/?query=python"
                                             
-                                    ka="sel-area-26">南油</a>
+                                    ka="sel-area-26">万科</a>
                                     <a                                              href="/c101280600/a_%E4%B8%9C%E9%97%A8/?query=python"
                                             
                                     ka="sel-area-27">东门</a>
-                                    <a                                              href="/c101280600/a_%E9%A6%99%E8%9C%9C%E6%B9%96/?query=python"
-                                            
-                                    ka="sel-area-28">香蜜湖</a>
                                     <a                                              href="/c101280600/a_%E4%BC%9A%E5%B1%95%E4%B8%AD%E5%BF%83/?query=python"
                                             
-                                    ka="sel-area-29">会展中心</a>
+                                    ka="sel-area-28">会展中心</a>
+                                    <a                                              href="/c101280600/a_%E9%A6%99%E8%9C%9C%E6%B9%96/?query=python"
+                                            
+                                    ka="sel-area-29">香蜜湖</a>
                                     <a                                              href="/c101280600/a_%E5%B9%B3%E6%B9%96/?query=python"
                                             
                                     ka="sel-area-30">平湖</a>
@@ -294,12 +294,12 @@
                                     <a                                              href="/c101280600/a_%E5%AE%9D%E5%AE%89%E4%B8%AD%E5%BF%83/?query=python"
                                             
                                     ka="sel-area-39">宝安中心</a>
-                                    <a                                              href="/c101280600/a_%E5%8D%8E%E5%BC%BA%E5%8D%97/?query=python"
-                                            
-                                    ka="sel-area-40">华强南</a>
                                     <a                                              href="/c101280600/a_%E6%96%B0%E6%B4%B2/?query=python"
                                             
-                                    ka="sel-area-41">新洲</a>
+                                    ka="sel-area-40">新洲</a>
+                                    <a                                              href="/c101280600/a_%E5%8D%8E%E5%BC%BA%E5%8D%97/?query=python"
+                                            
+                                    ka="sel-area-41">华强南</a>
                                     <a                                              href="/c101280600/a_%E7%9A%87%E5%B2%97/?query=python"
                                             
                                     ka="sel-area-42">皇岗</a>
@@ -333,15 +333,15 @@
                                     <a                                              href="/c101280600/a_%E6%B2%99%E5%A4%B4%E8%A7%92/?query=python"
                                             
                                     ka="sel-area-52">沙头角</a>
-                                    <a                                              href="/c101280600/a_%E7%9F%B3%E5%B2%A9/?query=python"
-                                            
-                                    ka="sel-area-53">石岩</a>
                                     <a                                              href="/c101280600/a_%E6%B2%99%E4%BA%95/?query=python"
                                             
-                                    ka="sel-area-54">沙井</a>
+                                    ka="sel-area-53">沙井</a>
                                     <a                                              href="/c101280600/a_%E6%9D%BE%E5%B2%97/?query=python"
                                             
-                                    ka="sel-area-55">松岗</a>
+                                    ka="sel-area-54">松岗</a>
+                                    <a                                              href="/c101280600/a_%E7%9F%B3%E5%B2%A9/?query=python"
+                                            
+                                    ka="sel-area-55">石岩</a>
                                     <a                                              href="/c101280600/a_%E6%99%AF%E7%94%B0/?query=python"
                                             
                                     ka="sel-area-56">景田</a>
@@ -354,15 +354,15 @@
                                     <a                                              href="/c101280600/a_%E8%8E%B2%E8%8A%B1%E4%BA%8C%E6%9D%91/?query=python"
                                             
                                     ka="sel-area-59">莲花二村</a>
-                                    <a                                              href="/c101280600/a_%E5%A4%A7%E8%BF%90/?query=python"
-                                            
-                                    ka="sel-area-60">大运</a>
-                                    <a                                              href="/c101280600/a_%E5%BA%B7%E6%A1%A5/?query=python"
-                                            
-                                    ka="sel-area-61">康桥</a>
                                     <a                                              href="/c101280600/a_%E4%B8%B9%E7%AB%B9%E5%A4%B4/?query=python"
                                             
-                                    ka="sel-area-62">丹竹头</a>
+                                    ka="sel-area-60">丹竹头</a>
+                                    <a                                              href="/c101280600/a_%E5%A4%A7%E8%BF%90/?query=python"
+                                            
+                                    ka="sel-area-61">大运</a>
+                                    <a                                              href="/c101280600/a_%E5%BA%B7%E6%A1%A5/?query=python"
+                                            
+                                    ka="sel-area-62">康桥</a>
                         </dd>
                     </dl>
             </div>
@@ -562,7 +562,7 @@
                 <div class="promotion-img"><a href="/user/login.html?initType=3" target="_blank" ka="ad_banner_2"><img src="https://static.zhipin.com/zhipin-geek/v24/web/geek/images/pro-2.png" alt="" /></a></div>
             </div>
                 <div class="subscribe-wechat-wrapper">
-                    <input type="hidden" name="sceneStr" value="68a13dd706574fb2a153fbb191e0058f">
+                    <input type="hidden" name="sceneStr" value="bfa924f3a1654a00a8c9a7d5e0bac9af">
                     <input type="hidden" name="filter" value='{"city":{"desc":"深圳","value":"101280600"},"query":"python"}'>
                     <a href="javascript:;" class="close" title="今天不再显示" ka="subscription_close"></a>
                     <dl>
@@ -574,7 +574,7 @@
                     <p>定时为你推送<span>【深圳/python】</span>相关职位</p>
                 </div>
             <div class="job-list">
-                <div class="job-tab" style="display: none" data-filter="" data-keyword="python" data-l3code="" data-rescount="612" data-page="1" data-source="1">
+                <div class="job-tab" style="display: none" data-filter="" data-keyword="python" data-l3code="" data-rescount="615" data-page="1" data-source="1">
                     <a href="javascript:;" class="cur" ka="recommend-job-list">热门职位</a><a href="javascript:;" ka="new-job-list">最新职位</a>
                 </div>
 
@@ -585,7 +585,33 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/3c2016bbf8413f3b1XR63t-1FVI~.html" data-jid="3c2016bbf8413f3b1XR63t-1FVI~" data-itemid="1" data-lid="1CjqWR5bZc4.search" data-jobid="20052850" data-index="0" ka="search_list_1" target="_blank">
+                                            <a href="/job_detail/c45002d8f44bbd2803R42N60EVc~.html" data-jid="c45002d8f44bbd2803R42N60EVc~" data-itemid="1" data-lid="1CnBtgEOXap.search" data-jobid="40233915" data-index="0" ka="search_list_1" target="_blank">
+                                                <div class="job-title">Python</div>
+                                                <span class="red">11-20K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_1_custompage" target="_blank">软通动力</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180508/d5b9d9be1d99ff8ec338c763bdb4444f0d93bc0c05ff0b82a6f54af05af992e7_s.jpg?x-oss-process=image/resize,w_40,limit_0" />尹女士<em class="vline"></em>招聘者</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=c45002d8f44bbd2803R42N60EVc~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=c06bb469e0f0640e1Hx-3t-8FFY~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/3c2016bbf8413f3b1XR63t-1FVI~.html" data-jid="3c2016bbf8413f3b1XR63t-1FVI~" data-itemid="2" data-lid="1CnBtgEOXap.search" data-jobid="20052850" data-index="1" ka="search_list_2" target="_blank">
                                                 <div class="job-title">Python</div>
                                                 <span class="red">10-20K</span>
                                                 <div class="info-detail"></div>
@@ -595,7 +621,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_1_custompage" target="_blank">软通动力</a></h3>
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_2_custompage" target="_blank">软通动力</a></h3>
                                             <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -603,7 +629,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190625/7466d1813adb9f33b5bb046a152623a0bd77155281c83215fea946c53de0755f_s.png?x-oss-process=image/resize,w_40,limit_0" />彭女士<em class="vline"></em>人事招聘</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=3c2016bbf8413f3b1XR63t-1FVI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=583e344677d52ec81XJy3t29E1A~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=3c2016bbf8413f3b1XR63t-1FVI~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=583e344677d52ec81XJy3t29E1A~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -611,7 +637,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/34cf17a8b910ac871HZz2tq7F1o~.html" data-jid="34cf17a8b910ac871HZz2tq7F1o~" data-itemid="2" data-lid="1CjqWR5bZc4.search" data-jobid="32917678" data-index="1" ka="search_list_2" target="_blank">
+                                            <a href="/job_detail/34cf17a8b910ac871HZz2tq7F1o~.html" data-jid="34cf17a8b910ac871HZz2tq7F1o~" data-itemid="3" data-lid="1CnBtgEOXap.search" data-jobid="32917678" data-index="2" ka="search_list_3" target="_blank">
                                                 <div class="job-title">python</div>
                                                 <span class="red">8-13K</span>
                                                 <div class="info-detail"></div>
@@ -621,7 +647,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/deb8ee191fcc270203153Nu5.html" ka="search_list_company_2_custompage" target="_blank">软通动力信息技术集团</a></h3>
+                                            <h3 class="name"><a href="/gongsi/deb8ee191fcc270203153Nu5.html" ka="search_list_company_3_custompage" target="_blank">软通动力信息技术集团</a></h3>
                                             <p>计算机软件<em class="vline"></em>不需要融资<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -629,7 +655,7 @@
                                         <h3 class="name"><img src="https://img2.bosszhipin.com/boss/avatar/avatar_1.png?x-oss-process=image/resize,w_40,limit_0" />罗女士<em class="vline"></em>主管</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=34cf17a8b910ac871HZz2tq7F1o~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=54652da2b96bbf541XN92NS1FVI~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=34cf17a8b910ac871HZz2tq7F1o~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=54652da2b96bbf541XN92NS1FVI~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -637,7 +663,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/98f36fd529eff4e61Xd40tW1GFM~.html" data-jid="98f36fd529eff4e61Xd40tW1GFM~" data-itemid="3" data-lid="1CjqWR5bZc4.search" data-jobid="23298881" data-index="2" ka="search_list_3" target="_blank">
+                                            <a href="/job_detail/98f36fd529eff4e61Xd40tW1GFM~.html" data-jid="98f36fd529eff4e61Xd40tW1GFM~" data-itemid="4" data-lid="1CnBtgEOXap.search" data-jobid="23298881" data-index="3" ka="search_list_4" target="_blank">
                                                 <div class="job-title">Python</div>
                                                 <span class="red">20-30K</span>
                                                 <div class="info-detail"></div>
@@ -647,7 +673,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_3_custompage" target="_blank">腾讯</a></h3>
+                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_4_custompage" target="_blank">腾讯</a></h3>
                                             <p>互联网<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -655,7 +681,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_8.png?x-oss-process=image/resize,w_40,limit_0" />曹先生<em class="vline"></em>工程师</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=98f36fd529eff4e61Xd40tW1GFM~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=20a03a44c354bcf503Zy09u7GFQ~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=98f36fd529eff4e61Xd40tW1GFM~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=20a03a44c354bcf503Zy09u7GFQ~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -663,7 +689,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/6153b8131f10cf0a1HJ43928GFo~.html" data-jid="6153b8131f10cf0a1HJ43928GFo~" data-itemid="4" data-lid="1CjqWR5bZc4.search" data-jobid="36240188" data-index="3" ka="search_list_4" target="_blank">
+                                            <a href="/job_detail/6153b8131f10cf0a1HJ43928GFo~.html" data-jid="6153b8131f10cf0a1HJ43928GFo~" data-itemid="5" data-lid="1CnBtgEOXap.search" data-jobid="36240188" data-index="4" ka="search_list_5" target="_blank">
                                                 <div class="job-title">python工程师</div>
                                                 <span class="red">15-25K</span>
                                                 <div class="info-detail"></div>
@@ -673,7 +699,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_4_custompage" target="_blank">软通动力</a></h3>
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_5_custompage" target="_blank">软通动力</a></h3>
                                             <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -681,7 +707,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180116/9663df69a639b09fd08a46b638f624b83f2641b4191c6d56835d3d1ffebee865_s.jpg?x-oss-process=image/resize,w_40,limit_0" />孟女士<em class="vline"></em>招聘顾问</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=6153b8131f10cf0a1HJ43928GFo~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=878e59a0513245b91Hdy3dS4FVY~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=6153b8131f10cf0a1HJ43928GFo~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=878e59a0513245b91Hdy3dS4FVY~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -689,25 +715,25 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/ad2877cd958976161HJ52dq5E1U~.html" data-jid="ad2877cd958976161HJ52dq5E1U~" data-itemid="5" data-lid="1CjqWR5bZc4.search" data-jobid="36327437" data-index="4" ka="search_list_5" target="_blank">
-                                                <div class="job-title">Python开发</div>
-                                                <span class="red">14-20K</span>
+                                            <a href="/job_detail/3ff9677f5b1e170a1XJ83Nu-FFQ~.html" data-jid="3ff9677f5b1e170a1XJ83Nu-FFQ~" data-itemid="6" data-lid="1CnBtgEOXap.search" data-jobid="26676346" data-index="5" ka="search_list_6" target="_blank">
+                                                <div class="job-title">Python</div>
+                                                <span class="red">20-40K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_5_custompage" target="_blank">软通动力</a></h3>
-                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_6_custompage" target="_blank">腾讯</a></h3>
+                                            <p>互联网<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190601/de7d9b60c7250b558661eff746c6afa3563c3c6168e6847717738804ad6e0361_s.jpg?x-oss-process=image/resize,w_40,limit_0" />谢女士<em class="vline"></em>招聘顾问</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_7.png?x-oss-process=image/resize,w_40,limit_0" />王先生<em class="vline"></em>高级开发工程师</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=ad2877cd958976161HJ52dq5E1U~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=d7c80c1e1150d23d1HR93d69GVM~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=3ff9677f5b1e170a1XJ83Nu-FFQ~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=0abcd66dded613a01HBy39-7GVE~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -715,39 +741,13 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/63fa8905566064b01X162Nm0FlI~.html" data-jid="63fa8905566064b01X162Nm0FlI~" data-itemid="6" data-lid="1CjqWR5bZc4.search" data-jobid="29034960" data-index="5" ka="search_list_6" target="_blank">
-                                                <div class="job-title">python</div>
-                                                <span class="red">10-20K</span>
+                                            <a href="/job_detail/376fb6cf10336f251H190t24GFI~.html" data-jid="376fb6cf10336f251H190t24GFI~" data-itemid="7" data-lid="1CnBtgEOXap.search" data-jobid="39790580" data-index="6" ka="search_list_7" target="_blank">
+                                                <div class="job-title">Python</div>
+                                                <span class="red">12-24K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 龙岗区 万科<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_6_custompage" target="_blank">软通动力</a></h3>
-                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190109/8a88299d7f1a3ccc80c8d01ec4f1c58acfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />陈先生<em class="vline"></em>招聘顾问</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=63fa8905566064b01X162Nm0FlI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=f7c701ccfb5360d01XR639m-GFA~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/9040332d9b7bca791X153N24GVQ~.html" data-jid="9040332d9b7bca791X153N24GVQ~" data-itemid="7" data-lid="1CjqWR5bZc4.search" data-jobid="29370596" data-index="6" ka="search_list_7" target="_blank">
-                                                <div class="job-title">python</div>
-                                                <span class="red">10-20K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>3-5年<em class="vline"></em>大专</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
@@ -756,10 +756,10 @@
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_15.png?x-oss-process=image/resize,w_40,limit_0" />李先生<em class="vline"></em>招聘者</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20161215/5c4cc130c1047d5efb613413dc1757048c7dd922ad47494fc02c388e12c00eac_s.jpg?x-oss-process=image/resize,w_40,limit_0" />黄女士<em class="vline"></em>高级招聘顾问</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=9040332d9b7bca791X153N24GVQ~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=171bee583190ded703Nz2tu0FFM~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=376fb6cf10336f251H190t24GFI~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=8cf69e9b5e0976b11XR-3t-8FVs~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -767,35 +767,9 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/02d21ad5fdb0fbc803Zz0t26GFo~.html" data-jid="02d21ad5fdb0fbc803Zz0t26GFo~" data-itemid="8" data-lid="1CjqWR5bZc4.search" data-jobid="42990788" data-index="7" ka="search_list_8" target="_blank">
-                                                <div class="job-title">Python-SZ</div>
-                                                <span class="red">10-14K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 南山区 后海<em class="vline"></em>3-5年<em class="vline"></em>大专</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/284f1b14cdbd38501nF80g~~.html" ka="search_list_company_8_custompage" target="_blank">文思海辉</a></h3>
-                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190711/fd958a8e5acdd3b73b5ca74effd2677a109527f50f64f8894680cc7bdf18b1d5_s.jpg?x-oss-process=image/resize,w_40,limit_0" />任女士<em class="vline"></em>招聘主管</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=02d21ad5fdb0fbc803Zz0t26GFo~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=0670521317e81cda1XRy3dS_GVo~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/d188bba049ea404503Vy2N-8GFE~.html" data-jid="d188bba049ea404503Vy2N-8GFE~" data-itemid="9" data-lid="1CjqWR5bZc4.search" data-jobid="41832183" data-index="8" ka="search_list_9" target="_blank">
-                                                <div class="job-title">python开发</div>
-                                                <span class="red">14-28K</span>
+                                            <a href="/job_detail/9040332d9b7bca791X153N24GVQ~.html" data-jid="9040332d9b7bca791X153N24GVQ~" data-itemid="8" data-lid="1CnBtgEOXap.search" data-jobid="29370596" data-index="7" ka="search_list_8" target="_blank">
+                                                <div class="job-title">python</div>
+                                                <span class="red">10-20K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
@@ -803,15 +777,15 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_9_custompage" target="_blank">软通动力</a></h3>
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_8_custompage" target="_blank">软通动力</a></h3>
                                             <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180407/1cdc8978e216749363f82ef63c801361cfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />陈先生<em class="vline"></em>招聘顾问</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_15.png?x-oss-process=image/resize,w_40,limit_0" />李先生<em class="vline"></em>招聘者</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d188bba049ea404503Vy2N-8GFE~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=e536954bca59409f1X1_2NW1ElE~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=9040332d9b7bca791X153N24GVQ~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=171bee583190ded703Nz2tu0FFM~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -819,9 +793,35 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/c45002d8f44bbd2803R42N60EVc~.html" data-jid="c45002d8f44bbd2803R42N60EVc~" data-itemid="10" data-lid="1CjqWR5bZc4.search" data-jobid="40233915" data-index="9" ka="search_list_10" target="_blank">
+                                            <a href="/job_detail/0380958fdf59270a03Rz2ty1E1s~.html" data-jid="0380958fdf59270a03Rz2ty1E1s~" data-itemid="9" data-lid="1CnBtgEOXap.search" data-jobid="40911839" data-index="8" ka="search_list_9" target="_blank">
                                                 <div class="job-title">Python</div>
-                                                <span class="red">11-20K</span>
+                                                <span class="red">10-15K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>1年以内<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/46b1eba305e0c34b3nN509Q~.html" ka="search_list_company_9_custompage" target="_blank">深圳鹏讯</a></h3>
+                                            <p>互联网<em class="vline"></em>未融资<em class="vline"></em>100-499人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_6.png?x-oss-process=image/resize,w_40,limit_0" />姜先生<em class="vline"></em>项目经理</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=0380958fdf59270a03Rz2ty1E1s~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=0db50293ff0e13041H192Nm6FFc~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/eec878b98a5938a01XJ72Nm-FVE~.html" data-jid="eec878b98a5938a01XJ72Nm-FVE~" data-itemid="10" data-lid="1CnBtgEOXap.search" data-jobid="26134353" data-index="9" ka="search_list_10" target="_blank">
+                                                <div class="job-title">Python爬虫</div>
+                                                <span class="red">15-30K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
@@ -834,10 +834,10 @@
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180508/d5b9d9be1d99ff8ec338c763bdb4444f0d93bc0c05ff0b82a6f54af05af992e7_s.jpg?x-oss-process=image/resize,w_40,limit_0" />尹女士<em class="vline"></em>招聘者</h3>
+                                        <h3 class="name"><img src="https://img2.bosszhipin.com/mcs/useravatar/20151012/eab1f8f237676d543f09bdba68fba6a04093e97900d1bafd2c18e22e891c1003_s.jpg?x-oss-process=image/resize,w_40,limit_0" />高女士<em class="vline"></em>招聘顾问</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=c45002d8f44bbd2803R42N60EVc~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=c06bb469e0f0640e1Hx-3t-8FFY~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=eec878b98a5938a01XJ72Nm-FVE~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=15353edcd0c000ea1nFz2d21FQ~~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -845,13 +845,13 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/376fb6cf10336f251H190t24GFI~.html" data-jid="376fb6cf10336f251H190t24GFI~" data-itemid="11" data-lid="1CjqWR5bZc4.search" data-jobid="39790580" data-index="10" ka="search_list_11" target="_blank">
-                                                <div class="job-title">Python</div>
-                                                <span class="red">12-24K</span>
+                                            <a href="/job_detail/1483f6652c10bd331X1-39-6GFY~.html" data-jid="1483f6652c10bd331X1-39-6GFY~" data-itemid="11" data-lid="1CnBtgEOXap.search" data-jobid="29442784" data-index="10" ka="search_list_11" target="_blank">
+                                                <div class="job-title">python后台开发</div>
+                                                <span class="red">14-26K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 南山区 科技园<em class="vline"></em>3-5年<em class="vline"></em>大专</p>
+                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
@@ -860,10 +860,10 @@
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20161215/5c4cc130c1047d5efb613413dc1757048c7dd922ad47494fc02c388e12c00eac_s.jpg?x-oss-process=image/resize,w_40,limit_0" />黄女士<em class="vline"></em>高级招聘顾问</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190624/f646abe847bd82bec4d201ddd56a3afecfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />付女士<em class="vline"></em>招聘顾问</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=376fb6cf10336f251H190t24GFI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=8cf69e9b5e0976b11XR-3t-8FVs~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1483f6652c10bd331X1-39-6GFY~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=b6fd01b2a596d48603F939u6F1E~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -871,7 +871,59 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/21a76e881bad8e281HR929S-GVI~.html" data-jid="21a76e881bad8e281HR929S-GVI~" data-itemid="12" data-lid="1CjqWR5bZc4.search" data-jobid="30709390" data-index="11" ka="search_list_12" target="_blank">
+                                            <a href="/job_detail/023c0c20752c998a03Z93Nu1GFE~.html" data-jid="023c0c20752c998a03Z93Nu1GFE~" data-itemid="12" data-lid="1CnBtgEOXap.search" data-jobid="42776883" data-index="11" ka="search_list_12" target="_blank">
+                                                <div class="job-title">Python工程师</div>
+                                                <span class="red">10-15K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 福田区 车公庙<em class="vline"></em>1-3年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/d1531d59617cd8381XJz2dw~.html" ka="search_list_company_12_custompage" target="_blank">客路旅行</a></h3>
+                                            <p>旅游<em class="vline"></em>D轮及以上<em class="vline"></em>1000-9999人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180815/bfdcf86280b9393637cfa34891be510fece9261d5ecbf68f8bf1739e06441485_s.jpg?x-oss-process=image/resize,w_40,limit_0" />熊先生<em class="vline"></em>联合创始人 CTO</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=023c0c20752c998a03Z93Nu1GFE~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=35504dd361b1fbdd0HR83Ni0GA~~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/8442917f2a0c84b21XFy2Nm_ElU~.html" data-jid="8442917f2a0c84b21XFy2Nm_ElU~" data-itemid="13" data-lid="1CnBtgEOXap.search" data-jobid="25834227" data-index="12" ka="search_list_13" target="_blank">
+                                                <div class="job-title">Python开发</div>
+                                                <span class="red">13-26K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_13_custompage" target="_blank">软通动力</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190621/b857944220eed7bcbf0faf9d04ea1f8b6a4e9f50a009b34d4d1d5f5c712e15b5_s.jpg?x-oss-process=image/resize,w_40,limit_0" />孙女士<em class="vline"></em>终端HR</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=8442917f2a0c84b21XFy2Nm_ElU~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=a45bfea7ed584b8e1HR-2ti9FVA~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/21a76e881bad8e281HR929S-GVI~.html" data-jid="21a76e881bad8e281HR929S-GVI~" data-itemid="14" data-lid="1CnBtgEOXap.search" data-jobid="30709390" data-index="13" ka="search_list_14" target="_blank">
                                                 <div class="job-title">python研发</div>
                                                 <span class="red">30-60K</span>
                                                 <div class="info-detail"></div>
@@ -881,7 +933,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_12_custompage" target="_blank">腾讯</a></h3>
+                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_14_custompage" target="_blank">腾讯</a></h3>
                                             <p>互联网<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -889,7 +941,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180427/d490b6fa5168694dad65d1d4a40da32575c16180a6821941e624f830d3d23cb1_s.jpg?x-oss-process=image/resize,w_40,limit_0" />陈先生<em class="vline"></em>大数据平台研发负责人</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=21a76e881bad8e281HR929S-GVI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=e15d142ee146cfb61HZ83dS7E1I~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=21a76e881bad8e281HR929S-GVI~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=e15d142ee146cfb61HZ83dS7E1I~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -897,25 +949,25 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/84c85801c1cafbb31XV509m4FVI~.html" data-jid="84c85801c1cafbb31XV509m4FVI~" data-itemid="13" data-lid="1CjqWR5bZc4.search" data-jobid="21384550" data-index="12" ka="search_list_13" target="_blank">
-                                                <div class="job-title">Python</div>
-                                                <span class="red">8-16K</span>
+                                            <a href="/job_detail/02d21ad5fdb0fbc803Zz0t26GFo~.html" data-jid="02d21ad5fdb0fbc803Zz0t26GFo~" data-itemid="15" data-lid="1CnBtgEOXap.search" data-jobid="42990788" data-index="14" ka="search_list_15" target="_blank">
+                                                <div class="job-title">Python-SZ</div>
+                                                <span class="red">10-14K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 龙岗区 坂田<em class="vline"></em>1-3年<em class="vline"></em>大专</p>
+                                        <p>深圳 南山区 后海<em class="vline"></em>3-5年<em class="vline"></em>大专</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/59486026eb5091e11nx-2Ni-Eg~~.html" ka="search_list_company_13_custompage" target="_blank">途灵旅行</a></h3>
-                                            <p>旅游<em class="vline"></em>不需要融资<em class="vline"></em>20-99人</p>
+                                            <h3 class="name"><a href="/gongsi/284f1b14cdbd38501nF80g~~.html" ka="search_list_company_15_custompage" target="_blank">文思海辉</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190614/68bcc0f80ac52881439cdfc2f1e93f2622602bff9c846b46a8c940c286a24a23_s.png?x-oss-process=image/resize,w_40,limit_0" />陶女士<em class="vline"></em>人力资源经理</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190711/fd958a8e5acdd3b73b5ca74effd2677a109527f50f64f8894680cc7bdf18b1d5_s.jpg?x-oss-process=image/resize,w_40,limit_0" />任女士<em class="vline"></em>招聘主管</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=84c85801c1cafbb31XV509m4FVI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=2f569250b5cc37661nV_2NS1FlY~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=02d21ad5fdb0fbc803Zz0t26GFo~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=0670521317e81cda1XRy3dS_GVo~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -923,7 +975,33 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/5464078cfafa51761XV83dy9GFo~.html" data-jid="5464078cfafa51761XV83dy9GFo~" data-itemid="14" data-lid="1CjqWR5bZc4.search" data-jobid="21661088" data-index="13" ka="search_list_14" target="_blank">
+                                            <a href="/job_detail/f73d65ae18d8ee9d03Z70tm-E1s~.html" data-jid="f73d65ae18d8ee9d03Z70tm-E1s~" data-itemid="16" data-lid="1CnBtgEOXap.search" data-jobid="42194339" data-index="15" ka="search_list_16" target="_blank">
+                                                <div class="job-title">Python开发工程师</div>
+                                                <span class="red">8-13K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 龙岗区 坂田<em class="vline"></em>1年以内<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/2d208a8834e4a58203d43Q~~.html" ka="search_list_company_16_custompage" target="_blank">中软国际</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20160714/719da0257fc07b20127041526e9b8334386bda6339671a7ef7e2f164e12692a8_s.jpg?x-oss-process=image/resize,w_40,limit_0" />农女士<em class="vline"></em>招聘助理</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=f73d65ae18d8ee9d03Z70tm-E1s~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=7f4a3ad617b5b2851nZ-2Nm-F1A~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/5464078cfafa51761XV83dy9GFo~.html" data-jid="5464078cfafa51761XV83dy9GFo~" data-itemid="17" data-lid="1CnBtgEOXap.search" data-jobid="21661088" data-index="16" ka="search_list_17" target="_blank">
                                                 <div class="job-title">Python</div>
                                                 <span class="red">12-20K</span>
                                                 <div class="info-detail"></div>
@@ -933,7 +1011,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/9c231fb2be25afd133B82Nw~.html" ka="search_list_company_14_custompage" target="_blank">富士康</a></h3>
+                                            <h3 class="name"><a href="/gongsi/9c231fb2be25afd133B82Nw~.html" ka="search_list_company_17_custompage" target="_blank">富士康</a></h3>
                                             <p>互联网<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -941,7 +1019,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180612/13a6cbce68aaaeef64407e20837e4d77d8da64a366e079cc9827bc0690f11695_s.jpg?x-oss-process=image/resize,w_40,limit_0" />唐先生<em class="vline"></em>技术主管</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=5464078cfafa51761XV83dy9GFo~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=1a4863709012752303R42927FlE~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=5464078cfafa51761XV83dy9GFo~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=1a4863709012752303R42927FlE~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -949,7 +1027,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/d2e31b4b1e0adff61XFz2ti8F1s~.html" data-jid="d2e31b4b1e0adff61XFz2ti8F1s~" data-itemid="15" data-lid="1CjqWR5bZc4.search" data-jobid="25915179" data-index="14" ka="search_list_15" target="_blank">
+                                            <a href="/job_detail/d2e31b4b1e0adff61XFz2ti8F1s~.html" data-jid="d2e31b4b1e0adff61XFz2ti8F1s~" data-itemid="18" data-lid="1CnBtgEOXap.search" data-jobid="25915179" data-index="17" ka="search_list_18" target="_blank">
                                                 <div class="job-title">Python</div>
                                                 <span class="red">13-25K</span>
                                                 <div class="info-detail"></div>
@@ -959,7 +1037,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_15_custompage" target="_blank">软通动力</a></h3>
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_18_custompage" target="_blank">软通动力</a></h3>
                                             <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -967,7 +1045,7 @@
                                         <h3 class="name"><img src="https://img2.bosszhipin.com/mcs/useravatar/20160218/8295ebbbac48fd86f8bb038ce29d22ea8c7dd922ad47494fc02c388e12c00eac_s.jpg?x-oss-process=image/resize,w_40,limit_0" />邹先生<em class="vline"></em>招聘经理</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d2e31b4b1e0adff61XFz2ti8F1s~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=94cc1a2fe3c7ce610nN72921Fw~~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d2e31b4b1e0adff61XFz2ti8F1s~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=94cc1a2fe3c7ce610nN72921Fw~~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -975,59 +1053,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/eec878b98a5938a01XJ72Nm-FVE~.html" data-jid="eec878b98a5938a01XJ72Nm-FVE~" data-itemid="16" data-lid="1CjqWR5bZc4.search" data-jobid="26134353" data-index="15" ka="search_list_16" target="_blank">
-                                                <div class="job-title">Python爬虫</div>
-                                                <span class="red">15-30K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 龙岗区 坂田<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_16_custompage" target="_blank">软通动力</a></h3>
-                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img2.bosszhipin.com/mcs/useravatar/20151012/eab1f8f237676d543f09bdba68fba6a04093e97900d1bafd2c18e22e891c1003_s.jpg?x-oss-process=image/resize,w_40,limit_0" />高女士<em class="vline"></em>招聘顾问</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=eec878b98a5938a01XJ72Nm-FVE~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=15353edcd0c000ea1nFz2d21FQ~~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/2e0dc6c1003381681HN52tS6Elc~.html" data-jid="2e0dc6c1003381681HN52tS6Elc~" data-itemid="17" data-lid="1CjqWR5bZc4.search" data-jobid="37319725" data-index="16" ka="search_list_17" target="_blank">
-                                                <div class="job-title">课程设计（python）</div>
-                                                <span class="red">10-15K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 宝安区 西乡<em class="vline"></em>经验不限<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/26a42a39b0223e331XNz3dm_.html" ka="search_list_company_17_custompage" target="_blank">编程猫</a></h3>
-                                            <p>移动互联网<em class="vline"></em>C轮<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190318/a989d841bc1954a42907b27db4df51e7d59ba57f44d96d80e6862b2aff920c4b_s.png?x-oss-process=image/resize,w_40,limit_0" />黄女士<em class="vline"></em>HRBP</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=2e0dc6c1003381681HN52tS6Elc~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=9394454effdb49591XR82tm_FlM~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/d0ceb1f4fd61bf8203d63Ny9FlI~.html" data-jid="d0ceb1f4fd61bf8203d63Ny9FlI~" data-itemid="18" data-lid="1CjqWR5bZc4.search" data-jobid="43071060" data-index="17" ka="search_list_18" target="_blank">
+                                            <a href="/job_detail/d0ceb1f4fd61bf8203d63Ny9FlI~.html" data-jid="d0ceb1f4fd61bf8203d63Ny9FlI~" data-itemid="19" data-lid="1CnBtgEOXap.search" data-jobid="43071060" data-index="18" ka="search_list_19" target="_blank">
                                                 <div class="job-title">Python开发工程师</div>
                                                 <span class="red">15-25K</span>
                                                 <div class="info-detail"></div>
@@ -1037,7 +1063,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/e631b873c9b65c551HN8.html" ka="search_list_company_18_custompage" target="_blank">平安银行</a></h3>
+                                            <h3 class="name"><a href="/gongsi/e631b873c9b65c551HN8.html" ka="search_list_company_19_custompage" target="_blank">平安银行</a></h3>
                                             <p>互联网金融<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
@@ -1045,7 +1071,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20181102/fa3fe134a256b508ac8375e094d27837b8e4e70826bc05a64a351973ae3d6730_s.jpg?x-oss-process=image/resize,w_40,limit_0" />袁女士<em class="vline"></em>HR</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d0ceb1f4fd61bf8203d63Ny9FlI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=3992588ff5b0c00003x-3t-9F1E~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d0ceb1f4fd61bf8203d63Ny9FlI~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=3992588ff5b0c00003x-3t-9F1E~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1053,33 +1079,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/1c77a36238ecceea03Z93Nq9FVI~.html" data-jid="1c77a36238ecceea03Z93Nq9FVI~" data-itemid="19" data-lid="1CjqWR5bZc4.search" data-jobid="42777050" data-index="18" ka="search_list_19" target="_blank">
-                                                <div class="job-title">高级Python工程师</div>
-                                                <span class="red">15-30K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 福田区 车公庙<em class="vline"></em>1-3年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/d1531d59617cd8381XJz2dw~.html" ka="search_list_company_19_custompage" target="_blank">客路旅行</a></h3>
-                                            <p>旅游<em class="vline"></em>D轮及以上<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180815/bfdcf86280b9393637cfa34891be510fece9261d5ecbf68f8bf1739e06441485_s.jpg?x-oss-process=image/resize,w_40,limit_0" />熊先生<em class="vline"></em>联合创始人 CTO</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1c77a36238ecceea03Z93Nq9FVI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=35504dd361b1fbdd0HR83Ni0GA~~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/fc52035f5216080d1HB90tq4FFQ~.html" data-jid="fc52035f5216080d1HB90tq4FFQ~" data-itemid="20" data-lid="1CjqWR5bZc4.search" data-jobid="34797546" data-index="19" ka="search_list_20" target="_blank">
+                                            <a href="/job_detail/fc52035f5216080d1HB90tq4FFQ~.html" data-jid="fc52035f5216080d1HB90tq4FFQ~" data-itemid="20" data-lid="1CnBtgEOXap.search" data-jobid="34797546" data-index="19" ka="search_list_20" target="_blank">
                                                 <div class="job-title">python/shell开发</div>
                                                 <span class="red">9-11K</span>
                                                 <div class="info-detail"></div>
@@ -1097,7 +1097,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/upload/avatar/20190723/44c7f0c54bfe664699e957b5d987e03f19babba867af4fc5e316f9252543992c_s.png?x-oss-process=image/resize,w_40,limit_0" />何女士<em class="vline"></em>招聘主管</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=fc52035f5216080d1HB90tq4FFQ~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=5556d21fc29ac64f1H142dq_Elc~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=fc52035f5216080d1HB90tq4FFQ~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=5556d21fc29ac64f1H142dq_Elc~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1105,9 +1105,61 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/1483f6652c10bd331X1-39-6GFY~.html" data-jid="1483f6652c10bd331X1-39-6GFY~" data-itemid="21" data-lid="1CjqWR5bZc4.search" data-jobid="29442784" data-index="20" ka="search_list_21" target="_blank">
-                                                <div class="job-title">python后台开发</div>
-                                                <span class="red">14-26K</span>
+                                            <a href="/job_detail/1d2ed1fa5b067dd11XN52NS-GFI~.html" data-jid="1d2ed1fa5b067dd11XN52NS-GFI~" data-itemid="21" data-lid="1CnBtgEOXap.search" data-jobid="27339380" data-index="20" ka="search_list_21" target="_blank">
+                                                <div class="job-title">Python开发工程师</div>
+                                                <span class="red">20-40K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/2e64a887a110ea9f1nRz.html" ka="search_list_company_21_custompage" target="_blank">腾讯</a></h3>
+                                            <p>互联网<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180810/c6c741bb4ed0d0802747cd34a5788d6c65ea9da2386826c11f0935e6200c3544_s.jpg?x-oss-process=image/resize,w_40,limit_0" />汤先生<em class="vline"></em>运营开发</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1d2ed1fa5b067dd11XN52NS-GFI~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=194befd834b109060HB62NS5EQ~~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/f6c17dc25e67266403Zz3t-7FVs~.html" data-jid="f6c17dc25e67266403Zz3t-7FVs~" data-itemid="22" data-lid="1CnBtgEOXap.search" data-jobid="42952659" data-index="21" ka="search_list_22" target="_blank">
+                                                <div class="job-title">python工程师</div>
+                                                <span class="red">15-30K·13薪</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳  <em class="vline"></em>3-5年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/118d03d2caff6eaa03J62NU~.html" ka="search_list_company_22_custompage" target="_blank">乐易</a></h3>
+                                            <p>游戏<em class="vline"></em>不需要融资<em class="vline"></em>100-499人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180413/d8ec8f4b454558e015b8ed0051d9b8169975c2ed51483962b608b84bdbe40249_s.jpg?x-oss-process=image/resize,w_40,limit_0" />hr</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=f6c17dc25e67266403Zz3t-7FVs~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=b49dcb7d4dc99af21HN-29y-ElQ~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/ad2877cd958976161HJ52dq5E1U~.html" data-jid="ad2877cd958976161HJ52dq5E1U~" data-itemid="23" data-lid="1CnBtgEOXap.search" data-jobid="36327437" data-index="22" ka="search_list_23" target="_blank">
+                                                <div class="job-title">Python开发</div>
+                                                <span class="red">14-20K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
@@ -1115,15 +1167,15 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_21_custompage" target="_blank">软通动力</a></h3>
+                                            <h3 class="name"><a href="/gongsi/29c1ab68d5e3d3360nN63Q~~.html" ka="search_list_company_23_custompage" target="_blank">软通动力</a></h3>
                                             <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190624/f646abe847bd82bec4d201ddd56a3afecfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />付女士<em class="vline"></em>招聘顾问</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190601/de7d9b60c7250b558661eff746c6afa3563c3c6168e6847717738804ad6e0361_s.jpg?x-oss-process=image/resize,w_40,limit_0" />谢女士<em class="vline"></em>招聘顾问</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1483f6652c10bd331X1-39-6GFY~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=b6fd01b2a596d48603F939u6F1E~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=ad2877cd958976161HJ52dq5E1U~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=d7c80c1e1150d23d1HR93d69GVM~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1131,25 +1183,25 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/42a48d5f342a3a7b1XZ42tq1FFo~.html" data-jid="42a48d5f342a3a7b1XZ42tq1FFo~" data-itemid="22" data-lid="1CjqWR5bZc4.search" data-jobid="22217848" data-index="21" ka="search_list_22" target="_blank">
-                                                <div class="job-title">教学老师/Python讲师</div>
-                                                <span class="red">9-15K</span>
+                                            <a href="/job_detail/af1810418db81e101X193Nq4FlE~.html" data-jid="af1810418db81e101X193Nq4FlE~" data-itemid="24" data-lid="1CnBtgEOXap.search" data-jobid="29777563" data-index="23" ka="search_list_24" target="_blank">
+                                                <div class="job-title">Python高级工程师</div>
+                                                <span class="red">25-50K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 福田区 园岭<em class="vline"></em>1年以内<em class="vline"></em>本科</p>
+                                        <p>深圳 南山区 后海<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/f7f8ddf0deaa72f403Vy3du-.html" ka="search_list_company_22_custompage" target="_blank">小码教育</a></h3>
-                                            <p>在线教育<em class="vline"></em>C轮<em class="vline"></em>1000-9999人</p>
+                                            <h3 class="name"><a href="/gongsi/92f55d321541dd371nd-3tq-EQ~~.html" ka="search_list_company_24_custompage" target="_blank">牧原数字技术有限公司</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180718/d1d60246ead08819f8255042ac558e11cfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />朱女士<em class="vline"></em>招聘专员</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20181128/044eda865f65e9036ce51bd686a0aa1f3acc5fe85dce11d6568cb532dc529707_s.jpg?x-oss-process=image/resize,w_40,limit_0" />曾女士<em class="vline"></em>人事专员</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=42a48d5f342a3a7b1XZ42tq1FFo~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=ee980e8f0f0e7a8f1Hxy2N20FlQ~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=af1810418db81e101X193Nq4FlE~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=7b167c8c78cbafb103Zy29W-Fls~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1157,77 +1209,25 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/703cd8c5124a9b781XN72tm1GFI~.html" data-jid="703cd8c5124a9b781XN72tm1GFI~" data-itemid="23" data-lid="1CjqWR5bZc4.search" data-jobid="27114880" data-index="22" ka="search_list_23" target="_blank">
-                                                <div class="job-title">Python后端工程师</div>
-                                                <span class="red">15-20K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 南山区 大冲<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/9a4fa341c5183edb1nN629u7GQ~~.html" ka="search_list_company_23_custompage" target="_blank">至优出行共享汽车</a></h3>
-                                            <p>移动互联网<em class="vline"></em>未融资<em class="vline"></em>100-499人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180414/9e581065b23de79a97cd8321a61f9a856c920a227f0e1b9f5232a69fa1866195_s.jpg?x-oss-process=image/resize,w_40,limit_0" />胡先生<em class="vline"></em>兼职hr</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=703cd8c5124a9b781XN72tm1GFI~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=9859294c6e2007ff1HN-39y5EFI~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/1cab3a24208b581603Z63Nq4EFE~.html" data-jid="1cab3a24208b581603Z63Nq4EFE~" data-itemid="24" data-lid="1CjqWR5bZc4.search" data-jobid="42077503" data-index="23" ka="search_list_24" target="_blank">
-                                                <div class="job-title">少儿编程python讲师</div>
-                                                <span class="red">9-13K·13薪</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 龙岗区 龙岗中心城<em class="vline"></em>经验不限<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/f7f8ddf0deaa72f403Vy3du-.html" ka="search_list_company_24_custompage" target="_blank">小码教育</a></h3>
-                                            <p>在线教育<em class="vline"></em>C轮<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20181209/42e21cd5b87f228eb925de9400978af7cfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />郭女士<em class="vline"></em>人力资源</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1cab3a24208b581603Z63Nq4EFE~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=0a73d74e904e8bc21X1-2dq9ElY~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/d43a8f69dddbf4cb1HVy3968FFA~.html" data-jid="d43a8f69dddbf4cb1HVy3968FFA~" data-itemid="25" data-lid="1CjqWR5bZc4.search" data-jobid="31843142" data-index="24" ka="search_list_25" target="_blank">
-                                                <div class="job-title">python爬虫挖掘</div>
+                                            <a href="/job_detail/7883c3f1650f54391nFz3N--F1Y~.html" data-jid="7883c3f1650f54391nFz3N--F1Y~" data-itemid="25" data-lid="1CnBtgEOXap.search" data-jobid="15972374" data-index="24" ka="search_list_25" target="_blank">
+                                                <div class="job-title">Python</div>
                                                 <span class="red">15-30K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 龙华区 龙华<em class="vline"></em>3-5年<em class="vline"></em>大专</p>
+                                        <p>深圳 福田区 车公庙<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/09f7e900ce794b901nV93Nq-Fw~~.html" ka="search_list_company_25_custompage" target="_blank">雷特科技</a></h3>
-                                            <p>电子商务<em class="vline"></em>不需要融资<em class="vline"></em>100-499人</p>
+                                            <h3 class="name"><a href="/gongsi/497f8e212b8c7b161nZy3Nq_Eg~~.html" ka="search_list_company_25_custompage" target="_blank">云图智联</a></h3>
+                                            <p>计算机软件<em class="vline"></em>未融资<em class="vline"></em>0-20人</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20190323/823d25bd8b2862be31afe0908c268ed0c49116248ea1ad5fbce9c6d0b0b2ff8c_s.jpg?x-oss-process=image/resize,w_40,limit_0" />戴女士<em class="vline"></em>hr</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20171202/e1bb6d669f800b5322de631b47168f6ddabd42ecb242ba0a532d69be562c2b2a_s.jpg?x-oss-process=image/resize,w_40,limit_0" />谢先生<em class="vline"></em>招聘者</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d43a8f69dddbf4cb1HVy3968FFA~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=4f24add6a10f62941Xxz3di1FFI~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=7883c3f1650f54391nFz3N--F1Y~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=bbb00b83df5575fb1HZz2tq4EVY~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1235,85 +1235,7 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/d142e8b50ba88afb1HV529-9FVE~.html" data-jid="d142e8b50ba88afb1HV529-9FVE~" data-itemid="26" data-lid="1CjqWR5bZc4.search" data-jobid="31302053" data-index="25" ka="search_list_26" target="_blank">
-                                                <div class="job-title">Python高级后台开发工程师</div>
-                                                <span class="red">15-22K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 宝安区 新安<em class="vline"></em>3-5年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/bf04d5da61eb7d11331_096-.html" ka="search_list_company_26_custompage" target="_blank">韵达</a></h3>
-                                            <p>物流/仓储<em class="vline"></em>已上市<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180416/0c1decf1dfac7f406e8c2dc0d2646652cfcd208495d565ef66e7dff9f98764da_s.jpg?x-oss-process=image/resize,w_40,limit_0" />王先生<em class="vline"></em>支持中心经理</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=d142e8b50ba88afb1HV529-9FVE~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=2a990773d8f3415c1HN_39i0FlA~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/023c0c20752c998a03Z93Nu1GFE~.html" data-jid="023c0c20752c998a03Z93Nu1GFE~" data-itemid="27" data-lid="1CjqWR5bZc4.search" data-jobid="42776883" data-index="26" ka="search_list_27" target="_blank">
-                                                <div class="job-title">Python工程师</div>
-                                                <span class="red">10-15K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 福田区 车公庙<em class="vline"></em>1-3年<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/d1531d59617cd8381XJz2dw~.html" ka="search_list_company_27_custompage" target="_blank">客路旅行</a></h3>
-                                            <p>旅游<em class="vline"></em>D轮及以上<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180815/bfdcf86280b9393637cfa34891be510fece9261d5ecbf68f8bf1739e06441485_s.jpg?x-oss-process=image/resize,w_40,limit_0" />熊先生<em class="vline"></em>联合创始人 CTO</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=023c0c20752c998a03Z93Nu1GFE~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=35504dd361b1fbdd0HR83Ni0GA~~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/f1abd491d703e2571XN_0t-6FFQ~.html" data-jid="f1abd491d703e2571XN_0t-6FFQ~" data-itemid="28" data-lid="1CjqWR5bZc4.search" data-jobid="27592746" data-index="27" ka="search_list_28" target="_blank">
-                                                <div class="job-title">信息安全工程师（python）</div>
-                                                <span class="red">15-30K</span>
-                                                <div class="info-detail"></div>
-                                            </a>
-                                        </h3>
-                                        <p>深圳 南山区 科技园<em class="vline"></em>经验不限<em class="vline"></em>本科</p>
-                                    </div>
-                                    <div class="info-company">
-                                        <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/0c48a9d6d025a51c33B42tQ~.html" ka="search_list_company_28_custompage" target="_blank">大疆创新</a></h3>
-                                            <p>互联网<em class="vline"></em>不需要融资<em class="vline"></em>1000-9999人</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/boss/avatar/avatar_12.png?x-oss-process=image/resize,w_40,limit_0" />方女士<em class="vline"></em>招聘者</h3>
-                                        <p></p>
-                                    </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=f1abd491d703e2571XN_0t-6FFQ~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=9aa44e94b076ed6e03N73NW8GFU~" class="btn btn-startchat">立即沟通
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="job-primary">
-                                    <div class="info-primary">
-                                        <h3 class="name">
-                                            <a href="/job_detail/fb4778768ff229e21nJ63N21F1c~.html" data-jid="fb4778768ff229e21nJ63N21F1c~" data-itemid="29" data-lid="1CjqWR5bZc4.search" data-jobid="16070875" data-index="28" ka="search_list_29" target="_blank">
+                                            <a href="/job_detail/fb4778768ff229e21nJ63N21F1c~.html" data-jid="fb4778768ff229e21nJ63N21F1c~" data-itemid="26" data-lid="1CnBtgEOXap.search" data-jobid="16070875" data-index="25" ka="search_list_26" target="_blank">
                                                 <div class="job-title">Python后台开发</div>
                                                 <span class="red">15-30K</span>
                                                 <div class="info-detail"></div>
@@ -1323,7 +1245,7 @@
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/5099acb74765a6b10nR_09m9.html" ka="search_list_company_29_custompage" target="_blank">AKULAKU</a></h3>
+                                            <h3 class="name"><a href="/gongsi/5099acb74765a6b10nR_09m9.html" ka="search_list_company_26_custompage" target="_blank">AKULAKU</a></h3>
                                             <p>互联网金融<em class="vline"></em>D轮及以上<em class="vline"></em>1000-9999人</p>
                                         </div>
                                     </div>
@@ -1331,7 +1253,7 @@
                                         <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20170706/06d38a0696d52be3d9cdbd00199409a48c7dd922ad47494fc02c388e12c00eac_s.jpg?x-oss-process=image/resize,w_40,limit_0" />周女士<em class="vline"></em>招聘经理</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=fb4778768ff229e21nJ63N21F1c~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=b1a42a1d822ebae01X1739-_EVQ~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=fb4778768ff229e21nJ63N21F1c~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=b1a42a1d822ebae01X1739-_EVQ~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1339,25 +1261,103 @@
                                 <div class="job-primary">
                                     <div class="info-primary">
                                         <h3 class="name">
-                                            <a href="/job_detail/f73d65ae18d8ee9d03Z70tm-E1s~.html" data-jid="f73d65ae18d8ee9d03Z70tm-E1s~" data-itemid="30" data-lid="1CjqWR5bZc4.search" data-jobid="42194339" data-index="29" ka="search_list_30" target="_blank">
-                                                <div class="job-title">Python开发工程师</div>
-                                                <span class="red">8-13K</span>
+                                            <a href="/job_detail/ae2f4a3fc74b94cc1X1909y1F1U~.html" data-jid="ae2f4a3fc74b94cc1X1909y1F1U~" data-itemid="27" data-lid="1CnBtgEOXap.search" data-jobid="29781877" data-index="26" ka="search_list_27" target="_blank">
+                                                <div class="job-title">兼职Python讲师</div>
+                                                <span class="red">20-30K</span>
                                                 <div class="info-detail"></div>
                                             </a>
                                         </h3>
-                                        <p>深圳 龙岗区 坂田<em class="vline"></em>1年以内<em class="vline"></em>本科</p>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>5-10年<em class="vline"></em>大专</p>
                                     </div>
                                     <div class="info-company">
                                         <div class="company-text">
-                                            <h3 class="name"><a href="/gongsi/2d208a8834e4a58203d43Q~~.html" ka="search_list_company_30_custompage" target="_blank">中软国际</a></h3>
-                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>10000人以上</p>
+                                            <h3 class="name"><a href="/gongsi/721d4247155ac94f1Hxy29g~.html" ka="search_list_company_27_custompage" target="_blank">泽林信息</a></h3>
+                                            <p>在线教育<em class="vline"></em>不需要融资<em class="vline"></em>1000-9999人</p>
                                         </div>
                                     </div>
                                     <div class="info-publis">
-                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20160714/719da0257fc07b20127041526e9b8334386bda6339671a7ef7e2f164e12692a8_s.jpg?x-oss-process=image/resize,w_40,limit_0" />农女士<em class="vline"></em>招聘助理</h3>
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180910/f00810d77ce91535dcb70d2e69734b69ace8696ea38e130fe3f373e2d2dc88e6_s.jpg?x-oss-process=image/resize,w_40,limit_0" />李女士<em class="vline"></em>招聘主管</h3>
                                         <p></p>
                                     </div>
-                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=f73d65ae18d8ee9d03Z70tm-E1s~&lid=1CjqWR5bZc4.search" redirect-url="/geek/new/index/chat?id=7f4a3ad617b5b2851nZ-2Nm-F1A~" class="btn btn-startchat">立即沟通
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=ae2f4a3fc74b94cc1X1909y1F1U~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=52f001c673cdfe5b03Fy09W5F1c~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/1a3a54c19b2e843e1HN_39W6FVE~.html" data-jid="1a3a54c19b2e843e1HN_39W6FVE~" data-itemid="28" data-lid="1CnBtgEOXap.search" data-jobid="37548753" data-index="27" ka="search_list_28" target="_blank">
+                                                <div class="job-title">python讲师 少儿编程</div>
+                                                <span class="red">10-15K</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 福田区 园岭<em class="vline"></em>经验不限<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/f7f8ddf0deaa72f403Vy3du-.html" ka="search_list_company_28_custompage" target="_blank">小码教育</a></h3>
+                                            <p>在线教育<em class="vline"></em>C轮<em class="vline"></em>1000-9999人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20181207/1fe53e45649f70c203f39eba041d47f2f1a9c0978e4b89b550ec0ff3a8149360_s.jpg?x-oss-process=image/resize,w_40,limit_0" />黄女士<em class="vline"></em>招聘专员</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=1a3a54c19b2e843e1HN_39W6FVE~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=9703178ffe0d0f271Hx83d--FVI~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/fafb0fd45256ffe61HV93tq0E1o~.html" data-jid="fafb0fd45256ffe61HV93tq0E1o~" data-itemid="29" data-lid="1CnBtgEOXap.search" data-jobid="31757938" data-index="28" ka="search_list_29" target="_blank">
+                                                <div class="job-title">python开发工程师</div>
+                                                <span class="red">12-24K·16薪</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 南山区 龙华<em class="vline"></em>经验不限<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/8e8feafa289627811nBy3Nq4.html" ka="search_list_company_29_custompage" target="_blank">深信服科技</a></h3>
+                                            <p>计算机软件<em class="vline"></em>已上市<em class="vline"></em>1000-9999人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20180330/74924f78773a8cd50b707355e3325c894ca60def968ed4ac5bbfb25f61ee7deb_s.jpg?x-oss-process=image/resize,w_40,limit_0" />徐先生<em class="vline"></em>HR</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=fafb0fd45256ffe61HV93tq0E1o~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=85c31fa21f9b48660nF62Ng~" class="btn btn-startchat">立即沟通
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job-primary">
+                                    <div class="info-primary">
+                                        <h3 class="name">
+                                            <a href="/job_detail/3762f621a37bfa721HV52Nm4EVE~.html" data-jid="3762f621a37bfa721HV52Nm4EVE~" data-itemid="30" data-lid="1CnBtgEOXap.search" data-jobid="31334513" data-index="29" ka="search_list_30" target="_blank">
+                                                <div class="job-title">python工程师</div>
+                                                <span class="red">15-30K·15薪</span>
+                                                <div class="info-detail"></div>
+                                            </a>
+                                        </h3>
+                                        <p>深圳 南山区 科技园<em class="vline"></em>1-3年<em class="vline"></em>本科</p>
+                                    </div>
+                                    <div class="info-company">
+                                        <div class="company-text">
+                                            <h3 class="name"><a href="/gongsi/004b2820e830e4061HZz09S8.html" ka="search_list_company_30_custompage" target="_blank">茂源资本</a></h3>
+                                            <p>互联网金融<em class="vline"></em>不需要融资<em class="vline"></em>20-99人</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-publis">
+                                        <h3 class="name"><img src="https://img.bosszhipin.com/beijin/mcs/useravatar/20181029/bb28895a6ac598e57f8510f3c88b52c7d960d3f9adf4d9f3e999a23ea43f3e29_s.jpg?x-oss-process=image/resize,w_40,limit_0" />袁女士<em class="vline"></em>HRBP</h3>
+                                        <p></p>
+                                    </div>
+                                    <a href="javascript:;" data-url="/wapi/zpgeek/friend/add.json?jobId=3762f621a37bfa721HV52Nm4EVE~&lid=1CnBtgEOXap.search" redirect-url="/geek/new/index/chat?id=7bb61b76559674b01HR62928FVs~" class="btn btn-startchat">立即沟通
                                     </a>
                                 </div>
                             </li>
@@ -1394,7 +1394,7 @@
                     <input type="hidden" class="form-data" name="t" value=""/>
                     <input type="hidden" class="form-data" name="a" value=""/>
                     <input type="hidden" class="form-data" name="b" value=""/>
-                    <input type="hidden" class="form-data" name="lid" value="1CjqWR5bZc4"/>
+                    <input type="hidden" class="form-data" name="lid" value="1CnBtgEOXap"/>
                 </form>
         </div>
     </div>
@@ -1856,14 +1856,14 @@
     </div>
     <div class="sign-content">
         <div class="inner-box">
-            <input type="hidden" class="scene" value="930e902391ae4577b195b49890d4311a"/>
+            <input type="hidden" class="scene" value="4f428812029e4633b25365e35c952f24"/>
             <h4>微信快速注册</h4>
             <div class="qrcodeimg-box">
                 <div class="invalid-box">
                     <p>请重新刷新二维码</p>
                     <button class="btn">点击刷新</button>
                 </div>
-                <img src="" data-url="https://www.zhipin.com/qrscan/dispatcher?qrId=930e902391ae4577b195b49890d4311a">
+                <img src="" data-url="https://www.zhipin.com/qrscan/dispatcher?qrId=4f428812029e4633b25365e35c952f24">
             </div>
             <p class="sign-tip">请用微信“扫一扫”扫描上方二维码<br/>进入快捷注册</p>
             <div class="text-tip">已有账号 <a href="javascript:;" class="link-signin">立即登录</a></div>
@@ -1970,7 +1970,7 @@
         "@id": "https://www.zhipin.com/c101280600/?query=python",
         "title": "【深圳python招聘】2019年深圳python最新人才招聘信息-BOSS直聘",
         "description": "BOSS直聘为求职者提供2019年最新的深圳python招聘信息，百万Boss在线直聘，直接开聊，在线面试，找工作就上BOSS直聘网站或APP，直接与Boss开聊吧！",
-        "upDate": "2019-05-16T23:34:31"
+        "upDate": "2019-04-24T10:59:23"
     }
 </script>
 </body>

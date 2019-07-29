@@ -1,8 +1,7 @@
-import requests, re, csv
+import requests, re
 from pyquery import PyQuery as pq
-from bs4 import BeautifulSoup
 
-from config import BOOS_URL, REQUEST_HEADERS
+from config import REQUEST_HEADERS
 
 
 def get_html(url):

@@ -1,7 +1,7 @@
 import requests
 
 from html_control import parse_one_job, parse_one_page
-from config import BOOS_URL, REQUEST_HEADERS
+from config import BOOS_URL, REQUEST_HEADERS,PROXY_TEST_URL
 from proxy_pool.core import RunProxy
 
 
@@ -12,16 +12,15 @@ class RunBossSpider(object):
         self.__start_proxy()
 
     def __start_proxy(self):
-        self.proxy_per = RunProxy('proxy_pool/ip.csv')
+        self.proxy_per = RunProxy('proxy_pool/ip2.csv')
         self.proxy_per.run()
 
     def get_html(self, url):
-        proxy = self.proxy_per.get_ip()
+        # proxy = self.proxy_per.get_ip()
         proxies = {
-            'http': 'http://' + proxy,
-            'https': 'https://' + proxy,
+            'http': 'http://' + PROXY_TEST_URL,
+            'https': 'https://' + PROXY_TEST_URL,
         }
-        print(proxies)
         response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
         if response.status_code == 200:
             return response.text

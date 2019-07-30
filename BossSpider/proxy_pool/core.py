@@ -1,6 +1,8 @@
 import pandas as pd
+import numpy as np
 import random
 import threading
+import time
 
 from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS
 
@@ -25,21 +27,17 @@ class RunProxy(object):
             if page:
                 result_page = str(page)
             PROXY_URLS.append(PROXY_URL_BASIC + result_page)
-        # print(PROXY_URLS)
 
     def run(self):
         if self.model:
             for proxy_url in PROXY_URLS:
-                # print(proxy_url)
-                ip_ports = self.download_ip(proxy_url)
-                ch_df = pd.DataFrame(ip_ports)
-                # 如果有数据就合并数据帧
-                if self.df_ip is None:
-                    self.df_ip = ch_df
-                else:
-                    # self.df_ip = pd.concat([self.df_ip, ch_df],axis=0, keys=['ip', 'port'],join='inner')
-                    self.df_ip.append(ch_df)
-                    # print(ch_df)
+                time.sleep(2)
+                print(proxy_url)
+                ip_lists = self.download_ip(proxy_url)
+                valid_lists = test_ip(ip_lists)
+                ch_ip_ports = pd.DataFrame(valid_lists)
+                raw_data = pd.concat([self.df_ip, ch_ip_ports], axis=0)
+                self.df_ip = raw_data.reset_index(drop=True)
             self.df_ip.to_csv(self.filename)
         else:
             self.df_ip = pd.read_csv(self.filename, index_col=0)
@@ -64,14 +62,31 @@ class RunProxy(object):
         th1.start()
         th1.join()
 
-    # def test_ip(self):
-    #     for test_ip in self.
+    def test_ip(self):
+        """双线程测试ip"""
+        get_data = pd.read_csv('ip2.csv', index_col=0)
+        get_data = np.array(get_data).tolist()
+        size = int(len(get_data) / 2)
+        th1_data = get_data[:size]
+        th2_data = get_data[size:]
+        th1 = threading.Thread(target=test_ip, args=(th1_data,))
+        th2 = threading.Thread(target=test_ip, args=(th2_data,))
+        th1.start()
+        th2.start()
+
+
 
 if __name__ == '__main__':
+    # print(get_html('https://www.xicidaili.com/nn/'))
     # proxy_per = RunProxy('ip.csv', model=True)
+    # proxy_per = RunProxy('ip1.csv')
+    # proxy_per.run()
+    # print(proxy_per.get_ip())
+    # test_ip(proxy_per.ip, proxy_per.port)
 
-    proxy_per = RunProxy('ip.csv')
-    proxy_per.run()
-    print(proxy_per.get_ip())
-    test_ip(proxy_per.ip, proxy_per.port)
+
+    pass
+    # time.sleep(1)
+
+    # print(test_ip(get_data))
     # print(type(ip_port))

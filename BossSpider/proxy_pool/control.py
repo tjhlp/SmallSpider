@@ -1,18 +1,26 @@
 import requests
 from pyquery import PyQuery as pq
+import telnetlib
 
-from proxy_pool.config import REQUEST_HEADERS
+from config import REQUEST_HEADERS
+
+proxy = '120.83.121.73:808'
+proxies = {
+    'http': 'http://' + proxy,
+    'https': 'https://' + proxy,
+}
 
 
 def get_html(url):
-    response = requests.get(url, headers=REQUEST_HEADERS)
+    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
     if response.status_code == 200:
         return response.text
     return None
 
 
-def get_page_ip(get_html):
-    doc = pq(get_html)
+def get_page_ip(url):
+    html = get_html(url)
+    doc = pq(html)
     doc_infos = doc.find('#ip_list .odd').items()
 
     ip_list = []
@@ -41,3 +49,16 @@ def get_page_ip(get_html):
     ip_ports = {'ip': ip_list, 'port': port_list}
 
     return ip_ports
+
+
+def test_ip(ip, port):
+    print('------------------------connect---------------------------')
+    # 连接Telnet服务器
+    try:
+        tn = telnetlib.Telnet(ip, port=port, timeout=20)
+    except:
+        print('该代理IP:{}无效'.format(ip))
+    else:
+        print('该代理IP:{}:{}有效'.format(ip, port))
+
+    print('-----------end-----------')

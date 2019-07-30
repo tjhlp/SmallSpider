@@ -1,14 +1,5 @@
-import requests, re
+import re
 from pyquery import PyQuery as pq
-
-from config import REQUEST_HEADERS
-
-
-def get_html(url):
-    response = requests.get(url, headers=REQUEST_HEADERS)
-    if response.status_code == 200:
-        return response.text
-    return None
 
 
 def generate_one_page(url):
@@ -29,8 +20,7 @@ def parse_one_page(html):
     return url_list
 
 
-def parse_one_job(url):
-    job_html = get_html(url)
+def parse_one_job(job_html):
     doc = pq(job_html)
     doc_main = doc('#main')
     doc_info = doc_main.find('.smallbanner div .name')

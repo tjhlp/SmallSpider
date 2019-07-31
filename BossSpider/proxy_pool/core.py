@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 import threading
+from concurrent.futures import ThreadPoolExecutor
 import time
 
 from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS
@@ -22,7 +23,7 @@ class RunProxy(object):
 
     @staticmethod
     def __generate_url():
-        for page in range(PAGE_NUM):
+        for page in range(1, PAGE_NUM):
             result_page = ''
             if page:
                 result_page = str(page)
@@ -32,26 +33,23 @@ class RunProxy(object):
         if self.model:
             for proxy_url in PROXY_URLS:
                 time.sleep(2)
-                print(proxy_url)
-                ip_lists = self.download_ip(proxy_url)
-                valid_lists = test_ip(ip_lists)
-                ch_ip_ports = pd.DataFrame(valid_lists)
-                raw_data = pd.concat([self.df_ip, ch_ip_ports], axis=0)
+                print('正在搜索:{}'.format(proxy_url))
+                ip_lists = get_page_ip(proxy_url)
+                df_ip_ports = pd.DataFrame(ip_lists)
+                raw_data = pd.concat([self.df_ip, df_ip_ports], axis=0)
                 self.df_ip = raw_data.reset_index(drop=True)
             self.df_ip.to_csv(self.filename)
         else:
             self.df_ip = pd.read_csv(self.filename, index_col=0)
-
-    @staticmethod
-    def download_ip(proxy_url):
-        return get_page_ip(proxy_url)
+            # print(self.df_ip)
 
     def get_ip(self):
         """返回ip和端口地址"""
         if self.df_ip is not None:
-            sign = random.randint(0, self.df_ip.size / 2)
-            self.ip = self.df_ip.ix[sign][0]
-            self.port = str(self.df_ip.ix[sign][1])
+            rd_num = random.randint(0, self.df_ip.size)
+            ip_list = eval(self.df_ip.iloc[rd_num][0])
+            self.ip = ip_list[0]
+            self.port = str(ip_list[1])
             get_ip_port = self.ip + ':' + self.port
             return get_ip_port
         return ReferenceError('你必须先运行run方法')
@@ -62,31 +60,23 @@ class RunProxy(object):
         th1.start()
         th1.join()
 
-    def test_ip(self):
+    @staticmethod
+    def run_test_ip():
         """双线程测试ip"""
-        get_data = pd.read_csv('ip2.csv', index_col=0)
-        get_data = np.array(get_data).tolist()
-        size = int(len(get_data) / 2)
-        th1_data = get_data[:size]
-        th2_data = get_data[size:]
-        th1 = threading.Thread(target=test_ip, args=(th1_data,))
-        th2 = threading.Thread(target=test_ip, args=(th2_data,))
-        th1.start()
-        th2.start()
-
+        # 创建一个包含2条线程的线程池
+        pool = ThreadPoolExecutor(max_workers=2)
+        get_data = pd.read_csv('ip.csv', index_col=0)
+        # print(get_data)
+        data_size = int(get_data.size/2)
+        th1_data = get_data[:data_size]
+        th2_data = get_data[data_size:]
+        future1 = pool.submit(test_ip, th1_data)
+        future2 = pool.submit(test_ip, th2_data)
+        pool.shutdown()
 
 
 if __name__ == '__main__':
-    # print(get_html('https://www.xicidaili.com/nn/'))
+    proxy_per = RunProxy('ip.csv')
     # proxy_per = RunProxy('ip.csv', model=True)
-    # proxy_per = RunProxy('ip1.csv')
-    # proxy_per.run()
-    # print(proxy_per.get_ip())
-    # test_ip(proxy_per.ip, proxy_per.port)
-
-
-    pass
-    # time.sleep(1)
-
-    # print(test_ip(get_data))
-    # print(type(ip_port))
+    proxy_per.run()
+    proxy_per.run_test_ip()

@@ -1,6 +1,10 @@
 import re
 from pyquery import PyQuery as pq
 
+from file_control import save_text_file
+
+count_list = []
+
 
 def generate_one_page(url):
     # https://www.zhipin.com/job_detail/67aad9d660dec84e1XN52t21FFI~.html
@@ -9,6 +13,9 @@ def generate_one_page(url):
 
 
 def parse_one_page(html):
+    filename = str(len(count_list)) + "_html.txt"
+    save_text_file(filename, html)
+    count_list.append(1)
     url_list = []
     doc = pq(html)
     doc_1 = doc('#main div .job-list ul')

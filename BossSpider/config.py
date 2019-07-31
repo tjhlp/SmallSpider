@@ -6,7 +6,7 @@ REQUEST_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
 }
 PROXY_URLS = []
-PROXY_TEST_URL = '111.230.203.211:8118'
+
 
 # 测试是否使用代理的网站
 TEST_IP_HTML = 'http://httpbin.org/get'

@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def save_text_file(filename, content):
-    with open(filename, 'w', encoding='utf-8')as w:
+    with open(filename, 'w', encoding='gbk')as w:
         w.write(content)
 
 

@@ -1,19 +1,25 @@
-import requests
+import requests, os, json
+import random
 
 from html_control import parse_one_job, parse_one_page
-from config import BOOS_URL, REQUEST_HEADERS,PROXY_TEST_URL
-from proxy_pool.core import RunProxy
+from config import BOOS_URL, REQUEST_HEADERS, PROXY_TEST_URL
+from proxy_pool.scheduler import RunProxy
 
 
 class RunBossSpider(object):
 
     def __init__(self):
-        self.proxy_per = None
+        self.proxy_list = []
         self.__start_proxy()
 
     def __start_proxy(self):
-        self.proxy_per = RunProxy('proxy_pool/ip2.csv')
-        self.proxy_per.run()
+        basic_path = 'proxy_pool/valid_ip/'
+        for filename in os.listdir(basic_path):
+            with open(basic_path + filename, 'r')as r:
+                content = json.loads(r.read())
+                for ip_port in content:
+                    self.proxy_list.append(ip_port)
+        print(self.proxy_list)
 
     def get_html(self, url):
         # proxy = self.proxy_per.get_ip()
@@ -39,5 +45,5 @@ class RunBossSpider(object):
 
 if __name__ == '__main__':
     boss_spi = RunBossSpider()
-    print(boss_spi.get_html('http://httpbin.org/get'))
+    # print(boss_spi.get_html('http://httpbin.org/get'))
     # print(boss_spi.run())

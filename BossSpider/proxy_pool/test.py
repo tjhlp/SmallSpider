@@ -50,23 +50,34 @@ ip_data2 = {
 #     w.write(json.dumps(my_dict))
 # ip = '123.123.123.434'
 # port = '2332'
-ip_ports1 = [["123.123.123.432", "2332"], ["123.123.123.434", "2332"]]
-ip_ports2 = [["123.213.123.432", "24"], ["132.123.123.434", "80"]]
-try:
-    with open('1.json', 'r')as r:
-        content = json.loads(r.read())
-        print(content)
-        # print(type(content))
-    count = 0
-    for index in ip_ports2:
-        list_data = ip_ports2[count]
-        content.append(list_data)
-        count += 1
-
-except:
-    content = ip_ports1
-
-with open('1.json', 'w')as w:
-    res = json.dumps(content)
-    w.write(res)
+# ip_ports1 = [["123.123.123.432", "2332"], ["123.123.123.434", "2332"]]
+# ip_ports2 = [["123.213.123.432", "24"], ["132.123.123.434", "80"]]
+# try:
+#     with open('1.json', 'r')as r:
+#         content = json.loads(r.read())
+#         print(content)
+#         # print(type(content))
+#     count = 0
+#     for index in ip_ports2:
+#         list_data = ip_ports2[count]
+#         content.append(list_data)
+#         count += 1
+#
+# except:
+#     content = ip_ports1
+#
+# with open('1.json', 'w')as w:
+#     res = json.dumps(content)
+#     w.write(res)
     # print(res)
+# for i in range(2):
+#     print(i)
+
+import os
+if os.path.exists('valid'):
+    print('1')
+else:
+    os.mkdir('valid')
+
+
+

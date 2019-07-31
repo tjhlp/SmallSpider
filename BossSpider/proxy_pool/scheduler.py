@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 import random
 import threading
+from multiprocessing import Pool
 from concurrent.futures import ThreadPoolExecutor
 import time
 
-from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS
+from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS, TEST_POOL_NUM
 
 from proxy_pool.control import get_html, get_page_ip, test_ip
 
@@ -62,16 +63,16 @@ class RunProxy(object):
 
     @staticmethod
     def run_test_ip():
-        """双线程测试ip"""
+        """测试ip的有效性"""
         # 创建一个包含2条线程的线程池
-        pool = ThreadPoolExecutor(max_workers=2)
+        pool = ThreadPoolExecutor(max_workers=TEST_POOL_NUM)
         get_data = pd.read_csv('ip.csv', index_col=0)
-        # print(get_data)
-        data_size = int(get_data.size/2)
-        th1_data = get_data[:data_size]
-        th2_data = get_data[data_size:]
-        future1 = pool.submit(test_ip, th1_data)
-        future2 = pool.submit(test_ip, th2_data)
+        # 使用线程池
+        for index in range(1, TEST_POOL_NUM + 1):
+            data_size_back = int(get_data.size / TEST_POOL_NUM * index)
+            data_size_forward = int(get_data.size / TEST_POOL_NUM * (index - 1))
+            th_data = get_data[data_size_forward:data_size_back]
+            future = pool.submit(test_ip, th_data)
         pool.shutdown()
 
 

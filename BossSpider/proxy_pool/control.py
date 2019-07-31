@@ -2,7 +2,8 @@ import requests
 from pyquery import PyQuery as pq
 import telnetlib
 import threading
-import json
+import json, os, time
+from multiprocessing import Pool
 
 from config import REQUEST_HEADERS
 
@@ -28,18 +29,22 @@ def save_text(content):
 
 
 def save_json(ip_ports, filename):
-    try:
-        with open(filename, 'r')as r:
-            content = json.loads(r.read())
-        for index in range(len(ip_ports)):
-            list_data = ip_ports[index]
-            content.append(list_data)
-    except:
-        content = ip_ports
+    # ip_ports = [["123.213.123.432", "24"], ["132.123.123.434", "80"]]
+    if os.path.exists('valid_ip'):
+        try:
+            with open(filename, 'r')as r:
+                content = json.loads(r.read())
+            for index in range(len(ip_ports)):
+                list_data = ip_ports[index]
+                content.append(list_data)
+        except:
+            content = ip_ports
 
-    with open(filename, 'w')as w:
-        res = json.dumps(content)
-        w.write(res)
+        with open(filename, 'w')as w:
+            res = json.dumps(content)
+            w.write(res)
+    else:
+        os.mkdir('valid_ip')
 
 
 def get_html(url):
@@ -87,6 +92,10 @@ def get_page_ip(url):
 
 def test_ip(ip_lists):
     """对pd的dataframe里面的ip进行测试"""
+    # 线程
+    present_name = threading.current_thread().name
+    # 进程
+    # present_name = os.getpid()
 
     valid_list = []
     for index in range(len(ip_lists)):
@@ -98,13 +107,13 @@ def test_ip(ip_lists):
             tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
             # pass
         except:
-            print('该代理IP:{}:{}无效,当前线程：{}'.format(ip_list[0], int(ip_list[1]), threading.current_thread().name))
+            print('该代理IP:{}:{}无效,当前：{}'.format(ip_list[0], int(ip_list[1]), present_name))
         else:
             ip_port.append(ip_list[0])
             ip_port.append(ip_list[1])
             valid_list.append(ip_port)
-            print('该代理IP:{}有效,当前线程：{}'.format(ip_list[0], threading.current_thread().name))
+            print('该代理IP:{}有效,当前：{}'.format(ip_list[0], present_name))
 
-    name = 'valid_ip/' + 'valid_ip' + threading.current_thread().name[-2:]
+    name = 'valid_ip/' + 'valid_ip' + present_name[-2:]
     save_json(valid_list, name + '.json')
 

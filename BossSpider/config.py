@@ -8,4 +8,8 @@ REQUEST_HEADERS = {
 PROXY_URLS = []
 PROXY_TEST_URL = '111.230.203.211:8118'
 
+# 测试是否使用代理的网站
 TEST_IP_HTML = 'http://httpbin.org/get'
+
+# 测试ip开启的线程池的数目
+TEST_POOL_NUM = 6

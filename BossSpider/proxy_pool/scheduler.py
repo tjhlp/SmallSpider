@@ -5,10 +5,12 @@ import threading
 from multiprocessing import Pool
 from concurrent.futures import ThreadPoolExecutor
 import time
+import os
+import json
 
 from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS, TEST_POOL_NUM
 
-from proxy_pool.control import get_html, get_page_ip, test_ip
+from proxy_pool.control import get_html, get_page_ip, test_ip, save_json
 
 
 class RunProxy(object):
@@ -21,6 +23,7 @@ class RunProxy(object):
         self.ip = None
         self.port = None
         self.__generate_url()
+        self.proxy_list = []
 
     @staticmethod
     def __generate_url():
@@ -75,9 +78,19 @@ class RunProxy(object):
             future = pool.submit(test_ip, th_data)
         pool.shutdown()
 
+    def merge_json_file(self):
+        basic_path = 'valid_ip/'
+        for filename in os.listdir(basic_path):
+            with open(basic_path + filename, 'r')as r:
+                content = json.loads(r.read())
+                for ip_port in content:
+                    self.proxy_list.append(ip_port)
+        save_json(self.proxy_list, 'valid_ip.json')
+
 
 if __name__ == '__main__':
-    proxy_per = RunProxy('ip.csv')
-    # proxy_per = RunProxy('ip.csv', model=True)
-    proxy_per.run()
-    proxy_per.run_test_ip()
+    # proxy_per = RunProxy('ip.csv')
+    proxy_per = RunProxy('ip.csv', model=True)
+    # proxy_per.run()
+    # proxy_per.run_test_ip()
+    proxy_per.merge_json_file()

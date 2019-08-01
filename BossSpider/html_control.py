@@ -1,3 +1,4 @@
+# coding=gbk
 import re
 from pyquery import PyQuery as pq
 
@@ -13,8 +14,8 @@ def generate_one_page(url):
 
 
 def parse_one_page(html):
-    filename = str(len(count_list)) + "_html.txt"
-    save_text_file(filename, html)
+    # filename = str(len(count_list)) + "_html.txt"
+    # save_text_file(filename, html)
     count_list.append(1)
     url_list = []
     doc = pq(html)

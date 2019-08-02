@@ -36,7 +36,7 @@ class RunProxy(object):
     def run(self):
         if self.model:
             for proxy_url in PROXY_URLS:
-                time.sleep(2)
+                time.sleep(random.randint(2, 5))
                 print('正在搜索:{}'.format(proxy_url))
                 ip_lists = get_page_ip(proxy_url)
                 df_ip_ports = pd.DataFrame(ip_lists)
@@ -90,6 +90,7 @@ class RunProxy(object):
 
 if __name__ == '__main__':
     # proxy_per = RunProxy('ip.csv')
+
     proxy_per = RunProxy('ip.csv', model=True)
     # proxy_per.run()
     # proxy_per.run_test_ip()

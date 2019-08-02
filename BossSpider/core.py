@@ -31,9 +31,9 @@ class RunBossSpider(object):
     def get_html(self, url):
         while True:
             re_proxy_ip = random.choice(self.proxy_list)
-            # proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
+            proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
             # 本机代理
-            proxy_ip = '127.0.0.1:1080'
+            # proxy_ip = '127.0.0.1:1080'
             proxies = {
                 'http': 'http://' + proxy_ip,
                 'https': 'http://' + proxy_ip,
@@ -50,12 +50,12 @@ class RunBossSpider(object):
             else:
                 if response.status_code == 200:
                     return response.text
-            # finally:
-            #     self.proxy_list.remove(re_proxy_ip)
-            #     if self.is_proxy:
-            #         if not len(self.proxy_list):
-            #             break
-        # return RuntimeError('ip用完，拒绝访问')
+            finally:
+                if self.is_proxy:
+                    self.proxy_list.remove(re_proxy_ip)
+                    if not len(self.proxy_list):
+                        break
+        return RuntimeError('ip用完，拒绝访问')
 
     def parse_one_url(self, url_list):
         present_name = threading.current_thread().name
@@ -95,6 +95,6 @@ class RunBossSpider(object):
 
 
 if __name__ == '__main__':
-    boss_spi = RunBossSpider()
+    boss_spi = RunBossSpider(is_proxy=True)
     # # print(boss_spi.get_html(TEST_IP_HTML))
     boss_spi.run()

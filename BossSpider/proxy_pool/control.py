@@ -104,6 +104,7 @@ def test_ip(ip_lists):
         ip_list = eval(df_ip)
         try:
             # 连接Telnet服务器
+            # TODO 判断响应时间
             tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
             # pass
         except:
@@ -116,4 +117,3 @@ def test_ip(ip_lists):
 
     name = 'valid_ip/' + 'valid_ip' + present_name[-2:]
     save_json(valid_list, name + '.json')
-

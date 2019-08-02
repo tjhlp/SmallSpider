@@ -7,6 +7,11 @@ from file_control import save_text_file
 count_list = []
 
 
+class RejectedException(Exception):
+    '''自定义的异常类'''
+    pass
+
+
 def generate_one_page(url):
     # https://www.zhipin.com/job_detail/67aad9d660dec84e1XN52t21FFI~.html
     url = 'https://www.zhipin.com' + url
@@ -25,6 +30,8 @@ def parse_one_page(html):
         get_url = re.findall(r'<a href="(.*?)"', str(urls))
         url_html = generate_one_page(get_url[0])
         url_list.append(url_html)
+    if not len(url_list):
+        raise RejectedException('被拒绝登陆')
     return url_list
 
 

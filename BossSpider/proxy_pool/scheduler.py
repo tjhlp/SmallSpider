@@ -33,20 +33,6 @@ class RunProxy(object):
                 result_page = str(page)
             PROXY_URLS.append(PROXY_URL_BASIC + result_page)
 
-    def run(self):
-        if self.model:
-            for proxy_url in PROXY_URLS:
-                time.sleep(random.randint(2, 5))
-                print('正在搜索:{}'.format(proxy_url))
-                ip_lists = get_page_ip(proxy_url)
-                df_ip_ports = pd.DataFrame(ip_lists)
-                raw_data = pd.concat([self.df_ip, df_ip_ports], axis=0)
-                self.df_ip = raw_data.reset_index(drop=True)
-            self.df_ip.to_csv(self.filename)
-        else:
-            self.df_ip = pd.read_csv(self.filename, index_col=0)
-            # print(self.df_ip)
-
     def get_ip(self):
         """返回ip和端口地址"""
         if self.df_ip is not None:
@@ -87,11 +73,25 @@ class RunProxy(object):
                     self.proxy_list.append(ip_port)
         save_json(self.proxy_list, 'valid_ip.json')
 
+    def run(self):
+        if self.model:
+            for proxy_url in PROXY_URLS:
+                time.sleep(random.randint(2, 5))
+                print('正在搜索:{}'.format(proxy_url))
+                ip_lists = get_page_ip(proxy_url)
+                df_ip_ports = pd.DataFrame(ip_lists)
+                raw_data = pd.concat([self.df_ip, df_ip_ports], axis=0)
+                self.df_ip = raw_data.reset_index(drop=True)
+            self.df_ip.to_csv(self.filename)
+        else:
+            self.df_ip = pd.read_csv(self.filename, index_col=0)
+            # print(self.df_ip)
+
 
 if __name__ == '__main__':
     # proxy_per = RunProxy('ip.csv')
 
     proxy_per = RunProxy('ip.csv', model=True)
-    # proxy_per.run()
-    # proxy_per.run_test_ip()
+    proxy_per.run()
+    proxy_per.run_test_ip()
     proxy_per.merge_json_file()

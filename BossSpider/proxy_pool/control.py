@@ -48,7 +48,12 @@ def save_json(ip_ports, filename):
 
 
 def get_html(url):
-    response = requests.get(url, headers=REQUEST_HEADERS)
+    proxy_ip = '127.0.0.1:1080'
+    proxies = {
+        'http': 'http://' + proxy_ip,
+        'https': 'http://' + proxy_ip,
+    }
+    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
     if response.status_code == 200:
         return response.text
     return None
@@ -104,7 +109,7 @@ def test_ip(ip_lists):
         ip_list = eval(df_ip)
         try:
             # 连接Telnet服务器
-            # TODO 判断响应时间
+            # 判断响应时间
             tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
             # pass
         except:

@@ -7,12 +7,13 @@ import random
 import time
 from datetime import datetime
 
-from html_control import parse_one_job, parse_one_page
+from html_control import parse_one_job, parse_one_page, RejectedException
 from file_control import save_job_json, save_text_file
 from config import BOOS_URL, REQUEST_HEADERS, TEST_IP_HTML
 
 JOB_INFO_POOL_NUM = 2
 SAVE_HTML_DIR = 'html/job/'
+PROXY_PATH = 'proxy_pool/valid_ip.json'
 
 
 class RunBossSpider(object):
@@ -23,39 +24,40 @@ class RunBossSpider(object):
         self.is_proxy = is_proxy
 
     def __load_proxy(self):
-        basic_path = 'proxy_pool/valid_ip.json'
-        with open(basic_path, 'r')as r:
+        with open(PROXY_PATH, 'r')as r:
             self.proxy_list = json.loads(r.read())
-        # print(self.proxy_list)
+        print('导入代理ip:{}个'.format(len(self.proxy_list)))
 
     def get_html(self, url):
-        while True:
-            re_proxy_ip = random.choice(self.proxy_list)
-            proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
-            # 本机代理
-            # proxy_ip = '127.0.0.1:1080'
-            proxies = {
-                'http': 'http://' + proxy_ip,
-                'https': 'http://' + proxy_ip,
-            }
-            try:
-                if self.is_proxy:
+        if self.is_proxy:
+            while True:
+                re_proxy_ip = random.choice(self.proxy_list)
+                proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
+                # 本机代理
+                # proxy_ip = '127.0.0.1:1080'
+                proxies = {
+                    'http': 'http://' + proxy_ip,
+                    'https': 'http://' + proxy_ip,
+                }
+                try:
                     response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
                     print(proxy_ip)
-                else:
-                    response = requests.get(url, headers=REQUEST_HEADERS)
-            except:
-                print('无效ip：{}'.format(proxy_ip))
-                continue
-            else:
-                if response.status_code == 200:
-                    return response.text
-            finally:
-                if self.is_proxy:
+                    break
+                except:
+                    print('无效ip：{}'.format(proxy_ip))
                     self.proxy_list.remove(re_proxy_ip)
+                    save_job_json(self.proxy_list, PROXY_PATH, update=True)
                     if not len(self.proxy_list):
-                        break
-        return RuntimeError('ip用完，拒绝访问')
+                        return RejectedException('拒绝次数过多，代理ip用完')
+                    continue
+
+        else:
+            response = requests.get(url, headers=REQUEST_HEADERS)
+
+        if response.status_code == 200:
+            return response.text
+        else:
+            raise RejectedException('访问被拒绝')
 
     def parse_one_url(self, url_list):
         present_name = threading.current_thread().name
@@ -96,5 +98,5 @@ class RunBossSpider(object):
 
 if __name__ == '__main__':
     boss_spi = RunBossSpider(is_proxy=True)
-    # # print(boss_spi.get_html(TEST_IP_HTML))
-    boss_spi.run()
+    print(boss_spi.get_html(TEST_IP_HTML))
+    # boss_spi.run()

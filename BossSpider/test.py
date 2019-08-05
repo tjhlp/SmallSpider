@@ -1,7 +1,9 @@
+# coding=gbk
 import jieba
 import random
 from datetime import datetime
 import json
+
 # print(type(datetime.now().strftime('%Y-%m-%d %H:%M')))
 # t = datetime.now().strftime('%Y%m%d-%H-%M')
 # n = 1
@@ -13,107 +15,59 @@ import json
 # list1 = [1,2,3]
 # print(list1[:1])
 
+# from pyquery import PyQuery as pq
+# with open('0_html.txt' ,'r', encoding='utf-8')as r:
+#     html = r.read()
+#     doc = pq(html)
+#     doc_1 = doc('#tips')
+#     if doc_1:
+#         print('11')
+#
+# list_a = ['Ö°Î»', 'ÒªÇó', '£º', '\n', '1', '¡¢', '¸ºÔğ', 'Íâ²¿', '¹«¿ª', 'Êı¾İ', 'µÄ', '×¥È¡', '¼°', '¿ÉÊÓ»¯', '\n', '2', '¡¢', '¸ù¾İ', 'ÒµÎñ', 'ĞèÇó', '½øĞĞ', 'Êı¾İ', 'ÕûºÏ', '\n', '3', '¡¢', 'ÊµÏÖ', 'Êı¾İÒµÎñ', '»ù´¡', '¼ÆËã', 'Âß¼­', '\n', '¸ÚÎ»Ö°Ôğ', '£º', '\n', '1', '¡¢', 'ÊìÏ¤', 'requests', '¡¢', 'lxml', '¡¢', 'xpath', 'µÈ', 'ÅÀ³æ', '¿ò¼Ü', '¼°', 'ÍøÒ³ÄÚÈİ', '½âÎö', 'ÖªÊ¶', '\n', '2', '¡¢', 'ÊìÏ¤', 'ÎÄ±¾', 'Ä£Ê½Æ¥Åä', '£¬', '»ñÈ¡', 'ÌØ¶¨', 'ÄÚÈİ', '\n', '3', '¡¢', 'ÓĞ', 'Á½¸ö', 'ÒÔÉÏ', '¶À×Ô', 'Êı¾İ', 'ÅÀÈ¡', 'ÏîÄ¿', '¾­Ñé', '\n', '4', '¡¢', 'ÊìÏ¤', '¡¢', 'numpy', '¡¢', 'scipy', '¡¢', 'matplotlib', 'µÈ', 'Êı¾İ·ÖÎö', '°ü', '\n', '5', '¡¢', 'ÊìÏ¤', '×ÔÈ»ÓïÑÔ', '´¦Àí', '¡¢', 'Éî¶È', 'Ñ§Ï°', '¼¼Êõ', '£¬', '°üÀ¨', '£º', 'ÖĞÎÄ', '·Ö´Ê', '¡¢', 'Ö÷Ìâ', '·ÖÎö', '¡¢', 'Í¼ÏñÊ¶±ğ', '¡¢', 'ÊÓÆµ', '·ÖÎö', '¡¢', 'ÖÇÄÜ', '¶Ô»°', '¡¢', 'Çé¸Ğ', '·ÖÎö', 'µÈ', '·½Ãæ', 'Ëã·¨', 'ÓĞ', 'Éî¿Ì', 'µÄ', 'ÁË½â', '£»', '\n', '6', '¡¢', 'ÁË½â', '»úÆ÷', 'Ñ§Ï°', '¡¢', 'Éñ¾­ÍøÂç', 'µÈ', 'Ïà¹Ø', 'Ëã·¨', '£¬', '°üÀ¨', 'µ«', '²»', 'ÏŞÓÚ', 'SVM', '¡¢', 'KNN', '¡¢', 'RNN', '¡¢', 'CNN', '¡¢', 'Ëæ»ú', 'É­ÁÖ', 'ÒÔ¼°', '¾ÛÀà·ÖÎö', 'µÈ', '£»', ' ', 'ÆóÒµ¼ò½é', '£º', '\n', '\n', 'ÉîÛÚ', 'ÄÁÔ­', 'Êı×Ö', '¼¼Êõ', 'ÓĞÏŞ¹«Ë¾', 'Î»ÓÚ', 'ÉîÛÚÊĞ', 'ÄÏÉ½Çø', 'ÈıÏæ', 'º£ÉĞ', '£¬', 'ÅşÁÚ', 'ÉîÛÚÍå', '³¬¼¶', '×Ü²¿', '»ùµØ', 'ºÍ', 'ÉîÛÚÊĞ', 'ÈË²Å', '¹«Ô°', '£¬', 'ÈË²Å', '¾Û¼¯', '£¬', '½»Í¨', '±ãÀû', '£¬', '·ç¾°ÓÅÃÀ', '¡£', 'ÉîÛÚ', 'ÄÁÔ­', 'Êı×Ö', '¼¼Êõ', 'ÓĞÏŞ¹«Ë¾', 'ÊôÓÚ', 'ÄÁÔ­', '¼¯ÍÅ', '(', '¹ÉÆ±´úÂë', '002714', ')', 'È«×Ê', '×Ó¹«Ë¾', '£¬', 'Îª', '¼¯ÍÅ', 'Ìá¹©', '´ó', 'Êı¾İ', '¡¢', 'Êı×Ö»¯', '¡¢', 'ÖÇÄÜ»¯', '¼¼Êõ', '·şÎñ', '£¬', 'Ö§³Å', '¹«Ë¾', 'Êı×Ö»¯', 'ºÍ', 'ÖÇÄÜ»¯', '·¢Õ¹', '£¬', '²¢']
+# dicta = {'a':1}
+# if 'b' in dicta:
+#     print('2')
+# if 'pandas' in list_a:
+#     print('1')
 
-import time
-import logging
+# x=np.linspace(-3,3,50)
+# y1=2*x+1
+# y2=x**2
+# plt.figure(num=2,figsize=(8,5))
+# plt.plot(x,y1,color='red',linewidth=2,linestyle='-')
+# plt.plot(x,y2)#½øĞĞ»­Í¼
+# plt.xlim(-1,2)
+# plt.ylim(-2,3)
+# plt.xlabel("I'm x")
+# plt.ylabel("I'm y")
+# new_ticks=np.linspace(-1,2,5)#Ğ¡±ê´Ó-1µ½2·ÖÎª5¸öµ¥Î»
+# print(new_ticks)
+# #[-1.   -0.25  0.5   1.25  2.  ]
+# plt.xticks(new_ticks)#½øĞĞÌæ»»ĞÂÏÂ±ê
+# plt.yticks([-2,-1,1,2,],
+#            [r'$really\ bad$','$bad$','$well$','$really\ well$'])
+# plt.show()
 
-class InvalidSystemClock(Exception):
-    """
-    æ—¶é’Ÿå›æ‹¨å¼‚å¸¸
-    """
-    pass
+import matplotlib.pyplot as plt
+import numpy as np
 
-# 64ä½IDçš„åˆ’åˆ†
-WORKER_ID_BITS = 5
-DATACENTER_ID_BITS = 5
-SEQUENCE_BITS = 12
-
-# æœ€å¤§å–å€¼è®¡ç®—
-MAX_WORKER_ID = -1 ^ (-1 << WORKER_ID_BITS)  # 2**5-1 0b11111
-MAX_DATACENTER_ID = -1 ^ (-1 << DATACENTER_ID_BITS)
-
-# ç§»ä½åç§»è®¡ç®—
-WOKER_ID_SHIFT = SEQUENCE_BITS
-DATACENTER_ID_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS
-TIMESTAMP_LEFT_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS + DATACENTER_ID_BITS
-
-# åºå·å¾ªç¯æ©ç 
-SEQUENCE_MASK = -1 ^ (-1 << SEQUENCE_BITS)
-
-# Twitterå…ƒå¹´æ—¶é—´æˆ³
-TWEPOCH = 1288834974657
-
-
-logger = logging.getLogger('flask.app')
-
-
-class IdWorker(object):
-    """
-    ç”¨äºç”ŸæˆIDs
-    """
-
-    def __init__(self, datacenter_id, worker_id, sequence=0):
-        """
-        åˆå§‹åŒ–
-        :param datacenter_id: æ•°æ®ä¸­å¿ƒï¼ˆæœºå™¨åŒºåŸŸï¼‰ID
-        :param worker_id: æœºå™¨ID
-        :param sequence: å…¶å®åºå·
-        """
-        # sanity check
-        if worker_id > MAX_WORKER_ID or worker_id < 0:
-            raise ValueError('worker_idå€¼è¶Šç•Œ')
-
-        if datacenter_id > MAX_DATACENTER_ID or datacenter_id < 0:
-            raise ValueError('datacenter_idå€¼è¶Šç•Œ')
-
-        self.worker_id = worker_id
-        self.datacenter_id = datacenter_id
-        self.sequence = sequence
-
-        self.last_timestamp = -1  # ä¸Šæ¬¡è®¡ç®—çš„æ—¶é—´æˆ³
-
-    def _gen_timestamp(self):
-        """
-        ç”Ÿæˆæ•´æ•°æ—¶é—´æˆ³
-        :return:int timestamp
-        """
-        return int(time.time() * 1000)
-
-    def get_id(self):
-        """
-        è·å–æ–°ID
-        :return:
-        """
-        timestamp = self._gen_timestamp()
-
-        # æ—¶é’Ÿå›æ‹¨
-        if timestamp < self.last_timestamp:
-            logging.error('clock is moving backwards. Rejecting requests until {}'.format(self.last_timestamp))
-            raise InvalidSystemClock
-
-        if timestamp == self.last_timestamp:
-            self.sequence = (self.sequence + 1) & SEQUENCE_MASK
-            if self.sequence == 0:
-                timestamp = self._til_next_millis(self.last_timestamp)
-        else:
-            self.sequence = 0
-
-        self.last_timestamp = timestamp
-
-        new_id = ((timestamp - TWEPOCH) << TIMESTAMP_LEFT_SHIFT) | (self.datacenter_id << DATACENTER_ID_SHIFT) | \
-                 (self.worker_id << WOKER_ID_SHIFT) | self.sequence
-        return new_id
-
-    def _til_next_millis(self, last_timestamp):
-        """
-        ç­‰åˆ°ä¸‹ä¸€æ¯«ç§’
-        """
-        timestamp = self._gen_timestamp()
-        while timestamp <= last_timestamp:
-            timestamp = self._gen_timestamp()
-        return timestamp
+data = {'ÉîÛÚÄÁÔ­Êı×Ö¼¼ÊõÓĞÏŞ¹«Ë¾': 5, 'ÉîÛÚÊĞĞÇÉÌµç×ÓÉÌÎñÓĞÏŞ¹«Ë¾': 9,
+        'ÉîÛÚÊĞ¿ÍÂ·ÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾': 8, 'ÉîÛÚÆ½°²×ÛºÏ½ğÈÚ·şÎñÓĞÏŞ¹«Ë¾ÉÏº£·Ö¹«Ë¾': 7,
+        'ÈíÍ¨¶¯Á¦ĞÅÏ¢¼¼Êõ£¨¼¯ÍÅ£©ÓĞÏŞ¹«Ë¾': 6, 'ÉîÛÚĞ¡²½ÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾': 5,
+        'ÉîÛÚÊĞÁªºÏĞÅÍ¨¿Æ¼¼ÓĞÏŞ¹«Ë¾': 4, 'ÉîĞÅ·ş¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾': 3}
 
 
-if __name__ == '__main__':
-    worker = IdWorker(1, 2, 0)
-    print(worker.get_id())
+def plot_data(data):
+    plt.figure(figsize=(20, 8), dpi=80)
+    plt.rcParams['figure.figsize'] = (15.0, 8.0)  # ÏÔÊ¾´óĞ¡
+    company_list = []
+    value_list = []
+    for key, value in data.items():
+        company_list.append(key)
+        value_list.append(value)
+    x_cor = [x for x in range(len(company_list))]
+    plt.barh(x_cor, value_list, facecolor='orange', height=0.3)
+    plt.yticks(x_cor, company_list)
+    plt.grid(alpha=0.3)
+    plt.xlabel('¹«Ë¾ÕĞÆ¸Ö°Î»')
+    plt.show()

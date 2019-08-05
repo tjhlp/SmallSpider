@@ -7,11 +7,6 @@ from multiprocessing import Pool
 
 from config import REQUEST_HEADERS
 
-proxy = '119.33.64.147:80'
-proxies = {
-    'http': 'http://' + proxy,
-    'https': 'https://' + proxy,
-}
 test_list = []
 
 
@@ -53,7 +48,7 @@ def get_html(url):
         'http': 'http://' + proxy_ip,
         'https': 'http://' + proxy_ip,
     }
-    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
+    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies, verify=False)
     if response.status_code == 200:
         return response.text
     return None
@@ -113,12 +108,12 @@ def test_ip(ip_lists):
             tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
             # pass
         except:
-            print('该代理IP:{}:{}无效,当前：{}'.format(ip_list[0], int(ip_list[1]), present_name))
+            print('第{}个代理IP:{}:{}无效,当前：{} '.format(index+1, ip_list[0], int(ip_list[1]), present_name))
         else:
             ip_port.append(ip_list[0])
             ip_port.append(ip_list[1])
             valid_list.append(ip_port)
-            print('该代理IP:{}有效,当前：{}'.format(ip_list[0], present_name))
+            print('第{}个代理IP:{}有效,当前：{}'.format(index+1, ip_list[0], present_name))
 
     name = 'valid_ip/' + 'valid_ip' + present_name[-2:]
     save_json(valid_list, name + '.json')

@@ -8,9 +8,10 @@ import time
 import os
 import json
 
-from config import PROXY_URL_BASIC, PAGE_NUM, PROXY_URLS, TEST_POOL_NUM
-
+from decorator import count_time
+from config import PROXY_URL_BASIC, PROXY_PAGE_NUM, PROXY_URLS, TEST_POOL_NUM
 from proxy_pool.control import get_html, get_page_ip, test_ip, save_json
+
 
 
 class RunProxy(object):
@@ -27,7 +28,7 @@ class RunProxy(object):
 
     @staticmethod
     def __generate_url():
-        for page in range(1, PAGE_NUM):
+        for page in range(1, PROXY_PAGE_NUM):
             result_page = ''
             if page:
                 result_page = str(page)
@@ -71,6 +72,8 @@ class RunProxy(object):
                 content = json.loads(r.read())
                 for ip_port in content:
                     self.proxy_list.append(ip_port)
+        # 加入本机代理ip
+        self.proxy_list.append(["127.0.0.1", "1008"])
         save_json(self.proxy_list, 'valid_ip.json')
 
     def run(self):
@@ -82,6 +85,7 @@ class RunProxy(object):
                 df_ip_ports = pd.DataFrame(ip_lists)
                 raw_data = pd.concat([self.df_ip, df_ip_ports], axis=0)
                 self.df_ip = raw_data.reset_index(drop=True)
+                print('{} 搜索完成'.format(proxy_url))
             self.df_ip.to_csv(self.filename)
         else:
             self.df_ip = pd.read_csv(self.filename, index_col=0)
@@ -90,8 +94,7 @@ class RunProxy(object):
 
 if __name__ == '__main__':
     # proxy_per = RunProxy('ip.csv')
-
     proxy_per = RunProxy('ip.csv', model=True)
-    proxy_per.run()
+    # proxy_per.run()
     proxy_per.run_test_ip()
     proxy_per.merge_json_file()

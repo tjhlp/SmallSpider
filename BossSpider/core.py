@@ -43,10 +43,11 @@ class RunBossSpider(object):
     def get_html(self, url):
         if self.is_proxy:
             while True:
+                self.proxy_list.append(["127.0.0.1", "1008"])
                 re_proxy_ip = random.choice(self.proxy_list)
-                proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
+                # proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
                 # 本机代理
-                # proxy_ip = '127.0.0.1:1080'
+                proxy_ip = '127.0.0.1:1080'
                 proxies = {
                     'http': 'http://' + proxy_ip,
                     'https': 'http://' + proxy_ip,
@@ -58,22 +59,13 @@ class RunBossSpider(object):
                     self.proxy_list.remove(re_proxy_ip)
                     save_job_json(self.proxy_list, PROXY_PATH, update=True)
                     if not len(self.proxy_list):
-                        return RejectedException('拒绝次数过多，代理ip用完')
+                        raise RejectedException('拒绝次数过多，代理ip用完')
                     continue
                 else:
                     if response.status_code == 200:
-                        doc = pq(response.text)
-                        doc_tips = doc('#tips')
-                        if doc_tips:
-                            self.proxy_list.remove(re_proxy_ip)
-                            print('{}数据被拦截'.format(proxy_ip))
-                            # save_job_json(self.proxy_list, PROXY_PATH, update=True)
-                            continue
-                        else:
-                            print(proxy_ip)
-                            return response.text
+                        return response.text
                     else:
-                        return '失败'
+                        return '{}数据被拦截'.format(proxy_ip)
 
         else:
             response = requests.get(url, headers=REQUEST_HEADERS)
@@ -137,7 +129,9 @@ class RunBossSpider(object):
 
     def run(self):
         for job_url in self.url_joblist:
+            time.sleep(random.randint(2, 5))
             html_content = self.get_html(job_url)
+            print(job_url)
             url_list = parse_one_page(html_content)
             self.multi_thread(url_list)
 

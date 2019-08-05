@@ -5,6 +5,7 @@ import json
 
 
 def save_text_file(filename, content):
+    """±£´ætxtÎÄ¼þ"""
     with open(filename, 'w', encoding='utf-8')as w:
         w.write(content)
 
@@ -25,26 +26,24 @@ def save_pd_csv(filename, df):
 
 
 def save_job_json(job_info, filename, update=False):
-    if os.path.exists('data'):
-        # print(filename)
-        if not update:
-            filename = 'data/' + filename
-            try:
-                with open(filename, 'r', encoding='utf-8')as r:
-                    job_content = json.loads(r.read())
-                for index in range(len(job_info)):
-                    list_data = job_info[index]
-                    job_content.append(list_data)
-            except:
-                job_content = job_info
-        else:
-            job_content = job_info
-
-        with open(filename, 'w', encoding='utf-8')as w:
-            res = json.dumps(job_content)
-            w.write(res)
-    else:
+    if not os.path.exists('data'):
         os.mkdir('data')
+    if not update:
+        filename = 'data/' + filename
+        try:
+            with open(filename, 'r', encoding='utf-8')as r:
+                job_content = json.loads(r.read())
+            for index in range(len(job_info)):
+                list_data = job_info[index]
+                job_content.append(list_data)
+        except:
+            job_content = job_info
+    else:
+        job_content = job_info
+
+    with open(filename, 'w', encoding='utf-8')as w:
+        res = json.dumps(job_content)
+        w.write(res)
 
 
 def read_json(filename):

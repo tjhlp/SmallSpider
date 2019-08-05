@@ -48,7 +48,7 @@ def get_html(url):
         'http': 'http://' + proxy_ip,
         'https': 'http://' + proxy_ip,
     }
-    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies, verify=False)
+    response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
     if response.status_code == 200:
         return response.text
     return None

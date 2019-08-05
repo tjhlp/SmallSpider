@@ -1,5 +1,8 @@
 import time
+
+
 def count_time(func):
+    """计时"""
     def inner(*args, **kwargs):
         start_time = time.time()
         result = func(*args, **kwargs)

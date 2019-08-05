@@ -13,7 +13,6 @@ from config import PROXY_URL_BASIC, PROXY_PAGE_NUM, PROXY_URLS, TEST_POOL_NUM
 from proxy_pool.control import get_html, get_page_ip, test_ip, save_json
 
 
-
 class RunProxy(object):
     """获取代理ip，先运行run方法，以后拿ip可以直接运行get_ip方法"""
 
@@ -45,16 +44,11 @@ class RunProxy(object):
             return get_ip_port
         return ReferenceError('你必须先运行run方法')
 
-    def process(self):
-        # args是关键字参数，需要加上名字，写成args=(self,)
-        th1 = threading.Thread(target=RunProxy.run, args=(self,))
-        th1.start()
-        th1.join()
 
     @staticmethod
     def run_test_ip():
         """测试ip的有效性"""
-        # 创建一个包含2条线程的线程池
+        # 创建一个包含n条线程的线程池
         pool = ThreadPoolExecutor(max_workers=TEST_POOL_NUM)
         get_data = pd.read_csv('ip.csv', index_col=0)
         # 使用线程池
@@ -95,6 +89,6 @@ class RunProxy(object):
 if __name__ == '__main__':
     # proxy_per = RunProxy('ip.csv')
     proxy_per = RunProxy('ip.csv', model=True)
-    # proxy_per.run()
+    proxy_per.run()
     proxy_per.run_test_ip()
     proxy_per.merge_json_file()

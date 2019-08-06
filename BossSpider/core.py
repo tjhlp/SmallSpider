@@ -10,9 +10,9 @@ from datetime import datetime
 from pyquery import PyQuery as pq
 from html_control import parse_one_job, parse_one_page, RejectedException
 from file_control import save_job_json, save_text_file
-from config import BOOS_URL, REQUEST_HEADERS, TEST_IP_HTML,BOOS_URL_FOLLOW,BOSS_PAGE_NUM
+from config import BOOS_URL, REQUEST_HEADERS, TEST_IP_HTML, BOOS_URL_FOLLOW, BOSS_PAGE_NUM
 
-JOB_INFO_POOL_NUM = 2
+JOB_INFO_POOL_NUM = 4
 SAVE_HTML_DIR = 'html/job/'
 PROXY_PATH = 'proxy_pool/valid_ip.json'
 
@@ -23,6 +23,7 @@ class RunBossSpider(object):
         self.proxy_list = []
         self.is_proxy = is_proxy
         self.url_joblist = []
+        self.current_ip = None
         self.__load_proxy()
         self.__generate_url()
 
@@ -38,34 +39,48 @@ class RunBossSpider(object):
         #  page=2&ka=page-2
         self.url_joblist.append(BOOS_URL)
         for index in range(BOSS_PAGE_NUM):
-            self.url_joblist.append(BOOS_URL_FOLLOW + str(index))
+            self.url_joblist.append(BOOS_URL_FOLLOW + 'page=' + str(index) + '&ka=page-' + str(index))
+
+    def choose_proxy(self):
+        # re_proxy_ip = random.choice(self.proxy_list)
+        # proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
+        # 本机代理
+        proxy_ip = '127.0.0.1:1080'
+        re_proxy_ip = ["127.0.0.1", "1008"]
+        proxies = {
+            'http': 'http://' + proxy_ip,
+            'https': 'http://' + proxy_ip,
+        }
+        return re_proxy_ip, proxies
 
     def get_html(self, url):
         if self.is_proxy:
+            # 测试代理ip次数
+            count = 1
+            re_proxy_ip, proxies = self.choose_proxy()
             while True:
-                self.proxy_list.append(["127.0.0.1", "1008"])
-                re_proxy_ip = random.choice(self.proxy_list)
-                # proxy_ip = re_proxy_ip[0] + ':' + re_proxy_ip[1]
-                # 本机代理
-                proxy_ip = '127.0.0.1:1080'
-                proxies = {
-                    'http': 'http://' + proxy_ip,
-                    'https': 'http://' + proxy_ip,
-                }
                 try:
                     response = requests.get(url, headers=REQUEST_HEADERS, proxies=proxies)
                 except:
-                    print('无效ip：{}'.format(proxy_ip))
-                    self.proxy_list.remove(re_proxy_ip)
-                    save_job_json(self.proxy_list, PROXY_PATH, update=True)
-                    if not len(self.proxy_list):
-                        raise RejectedException('拒绝次数过多，代理ip用完')
-                    continue
+                    print('第{}次无效：{}'.format(count, re_proxy_ip))
+                    if count >= 3:
+                        self.proxy_list.remove(re_proxy_ip)
+                        save_job_json(self.proxy_list, PROXY_PATH, update=True)
+                        if not len(self.proxy_list):
+                            # raise RejectedException('拒绝次数过多，代理ip用完')
+                            self.proxy_list.append(["127.0.0.1", "1008"])
+                            print('拒绝次数过多，代理ip用完,启用本机代理ip')
+                        re_proxy_ip, proxies = self.choose_proxy()
+                        count = 1
+                        continue
+                    else:
+                        count += 1
                 else:
                     if response.status_code == 200:
+                        self.current_ip = re_proxy_ip
                         return response.text
                     else:
-                        return '{}数据被拦截'.format(proxy_ip)
+                        return '{}数据被拦截'.format(re_proxy_ip)
 
         else:
             response = requests.get(url, headers=REQUEST_HEADERS)
@@ -93,30 +108,15 @@ class RunBossSpider(object):
             index += 1
         return _job_list
 
-    def multi_thread(self, url_list):
-        pool = ThreadPoolExecutor(max_workers=JOB_INFO_POOL_NUM)
-        get_data = len(url_list)
-        # 使用线程池
-        for index in range(1, JOB_INFO_POOL_NUM + 1):
-            data_size_back = int(get_data / JOB_INFO_POOL_NUM * index)
-            data_size_forward = int(get_data / JOB_INFO_POOL_NUM * (index - 1))
-            th_data = url_list[data_size_forward:data_size_back]
-            future = pool.submit(self.parse_one_url, th_data)
-        pool.shutdown()
-
-    @staticmethod
-    def test_proxy():
+    def test_proxy(self):
         # 本机代理
-        proxy_ip = '127.0.0.1:1080'
-        proxies = {
-            'http': 'http://' + proxy_ip,
-            'https': 'http://' + proxy_ip,
-        }
+        re_proxy_ip, proxies = self.choose_proxy()
         response = requests.get(TEST_IP_HTML, headers=REQUEST_HEADERS, proxies=proxies)
         return response.text
 
     @staticmethod
     def read_html(file):
+        """手动读取job的html文件"""
         _job_list = []
         paths = os.listdir(file)
         for path in paths:
@@ -127,17 +127,42 @@ class RunBossSpider(object):
                 _job_list.append(job_info)
                 save_job_json(_job_list, datetime.now().strftime('%Y%m%d-%H-%M') + '_job_info.json')
 
+    def multi_thread(self, url_list):
+        """多线程"""
+        pool = ThreadPoolExecutor(max_workers=JOB_INFO_POOL_NUM)
+        get_data = len(url_list)
+        # 使用线程池
+        for index in range(1, JOB_INFO_POOL_NUM + 1):
+            time.sleep(random.randint(1, 4))
+            data_size_back = int(get_data / JOB_INFO_POOL_NUM * index)
+            data_size_forward = int(get_data / JOB_INFO_POOL_NUM * (index - 1))
+            divided_data = url_list[data_size_forward:data_size_back]
+            future = pool.submit(self.parse_one_url, divided_data)
+        pool.shutdown()
+
     def run(self):
+        """先得到页面关于job职位信息的网址"""
+        temp_list = []
         for job_url in self.url_joblist:
-            time.sleep(random.randint(2, 5))
-            html_content = self.get_html(job_url)
-            print(job_url)
-            url_list = parse_one_page(html_content)
-            self.multi_thread(url_list)
+            while True:
+                time.sleep(random.randint(2, 4))
+                html_content = self.get_html(job_url)
+                # print(html_content)
+                url_list = parse_one_page(html_content)
+                if len(url_list):
+                    # print('{}获得joblist数据成功'.format(self.current_ip))
+                    temp_list.extend(url_list)
+                    break
+                else:
+                    pass
+                    # print('{}获得joblist数据失败'.format(self.current_ip))
+        # print(temp_list)
+        # 开启多线程爬取 temp list
+        self.multi_thread(temp_list)
 
 
 if __name__ == '__main__':
     boss_spi = RunBossSpider(is_proxy=True)
     boss_spi.run()
     # print(boss_spi.test_proxy())
-    # boss_spi.read_html('html/job')
+

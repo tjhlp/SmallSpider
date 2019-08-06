@@ -20,8 +20,8 @@ def generate_one_page(url):
 
 def parse_one_page(html):
     filename = str(len(count_list)) + "_html.txt"
-    save_text_file(filename, html)
-    count_list.append(1)
+    # save_text_file(filename, html)
+    # count_list.append(1)
     url_list = []
     doc = pq(html)
     doc_1 = doc('#main div .job-list ul')
@@ -30,8 +30,6 @@ def parse_one_page(html):
         get_url = re.findall(r'<a href="(.*?)"', str(urls))
         url_html = generate_one_page(get_url[0])
         url_list.append(url_html)
-    if not len(url_list):
-        raise RejectedException('±»¾Ü¾øµÇÂ½')
     return url_list
 
 

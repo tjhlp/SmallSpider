@@ -1,18 +1,11 @@
-#encodig=utf-8
-from __future__ import print_function, unicode_literals
-import jieba
+list_a = [1,2,3,4,5,1,2,3,2,3,8,5,4,32,9,75,4,3,4,5,4345,]
 
-
-test_sent = "李小福是创新办主任也是云计算方面的专家，云计算云计算云计算，云计算是我国新技术"
-words1 = jieba.cut(test_sent)
-print('/'.join(words1))
-
-print("="*40)
-
-jieba.load_userdict("userdict.txt")
-words2 = jieba.cut(test_sent)
-print('/'.join(words2))
-
+set_a = set(list_a)
+print(set_a)
+dict_a = {}
+for i in set_a:
+    dict_a[i] = list_a.count(i)
+print(dict_a)
 
 
 

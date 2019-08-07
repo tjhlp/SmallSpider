@@ -17,9 +17,10 @@ def count_time(func):
 
     def inner(self, *args, **kwargs):
         start_time = time.time()
+        print('开始处理数据')
         result = func(self, *args, **kwargs)
         end_time = time.time()
-        print('处理数据用时:{}'.format(end_time - start_time))
+        print('数据处理完成，处理数据用时:{}'.format(end_time - start_time))
         return result
 
     return inner
@@ -31,7 +32,6 @@ class HandlerData(object):
         self.remove_list = []
         self.job_info_file = []
         self._load_stopwords()
-        self.words_valid_dict = {}
 
     def _load_stopwords(self):
         with open('removewords.txt', 'r', encoding='utf-8')as f:
@@ -46,13 +46,15 @@ class HandlerData(object):
         :param words_lists:
         :return:
         """
-        for word in words_lists:
+        words_valid_dict = {}
+        set_words = set(words_lists)
+        for word in set_words:
             if word not in self.remove_list:
-                if word in self.words_valid_dict:
-                    self.words_valid_dict[word] += 1
-                else:
-                    self.words_valid_dict[word] = 1
-        return self.words_valid_dict
+                words_valid_dict[word] = words_lists.count(word)
+        else:
+            words_data = sorted(words_valid_dict.items(), key=lambda x: x[1])
+            res_words_data = dict(words_data[:9])
+        return res_words_data
 
     def read_json(self):
         """
@@ -81,7 +83,6 @@ class HandlerData(object):
                 company_dict[company_name] += 1
             else:
                 company_dict[company_name] = 1
-
         return company_dict
 
     @staticmethod
@@ -94,21 +95,26 @@ class HandlerData(object):
         return participle_data
 
     @count_time
-    def multi_job(self):
+    def multi_job_info(self):
         """多进程解析数据"""
         # TODO 多进程 解析数据
-        result = []
-        po = Pool(POOL_NUMBER)  # 定义一个进程池，最大进程数2
+        results = []
+        po = Pool(POOL_NUMBER)  # 定义一个进程池
         get_size = len(self.job_info_file)
+        print('开始统计{}个职位信息'.format(get_size))
         for index in range(POOL_NUMBER):
             data_size_back = int(get_size / POOL_NUMBER * index)
             data_size_forward = int(get_size / POOL_NUMBER * (index - 1))
             divided_data = self.job_info_file[data_size_forward:data_size_back]
             res = po.apply_async(self.job_info_classification, (divided_data,))
-            print(res)
-            # result.append()
+            results.append(res)
         po.close()
         po.join()
+        job_list = []
+        for result in results:
+            job_list.extend(result.get())
+
+        return job_list
 
     @staticmethod
     def plot_data(company_data, filenames):
@@ -138,18 +144,18 @@ class HandlerData(object):
         plt.show()
 
     def run(self):
-        # 读取数据
+        # 公司数据统计
         self.read_json()
         pr_company_data = self.company_classification()
+        print('总共{}家公司'.format(len(pr_company_data)))
         company_data = sorted(pr_company_data.items(), key=lambda x: x[1], reverse=True)
         res_company_data = dict(company_data[:9])
         self.plot_data(res_company_data, './company.jpg')
 
-        # 取出计数排名前10的元素
-        # words_data = sorted(self.words_valid_dict.items(), key=lambda x: x[1], reverse=True)
-        # res_words_data = dict(words_data[:9])
-        # print(res_words_data)
-        # self.plot_data(res_words_data, './job_info.jpg')
+        # 职位信息统计,取出计数排名前10的关键词
+        job_list = self.multi_job_info()
+        job_info_data = self.count_words(job_list)
+        self.plot_data(job_info_data, './job_info.jpg')
 
 
 if __name__ == '__main__':

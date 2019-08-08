@@ -1,0 +1,14 @@
+Python
+Linux
+MySQL
+C++
+PHP
+Java
+Javascript
+Git
+Shell
+Go
+Golang
+C
+SQL
+Ruby

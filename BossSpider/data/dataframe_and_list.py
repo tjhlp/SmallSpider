@@ -25,7 +25,7 @@ c = ['cdadf', '法撒旦', '我', '哈哈', 'werwq', 'asfweq', 'qwerqwe', 'asfda
 @count_time
 def generate_str_list():
     a = []
-    for i in range(10000000):
+    for i in range(100000000):
         d = random.choice(c)
         a.append(d)
     return a

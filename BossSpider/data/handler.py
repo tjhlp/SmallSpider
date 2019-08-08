@@ -7,7 +7,7 @@ import time
 from multiprocessing import Pool
 import matplotlib.pyplot as plt
 import pandas as pd
-from config import TEST_COMPANY
+from config import TEST_COMPANY, KEY_LANGUAGE
 
 POOL_NUMBER = 2
 
@@ -31,15 +31,12 @@ class HandlerData(object):
         self.file = file
         self.remove_list = []
         self.job_info_file = []
-        self._load_stopwords()
+        self.key_language = []
+        self._load_words()
 
-    def _load_stopwords(self):
+    @staticmethod
+    def _load_words():
         jieba.load_userdict("userdict.txt")
-        with open('removewords.txt', 'r', encoding='utf-8')as f:
-            content = f.read()
-            self.remove_list = content.split('\n')
-            self.remove_list.append('\n')
-            self.remove_list.append(' ')
 
     @count_time
     def count_words(self, words_lists):
@@ -50,11 +47,34 @@ class HandlerData(object):
         """
         print('开始数据清洗，统计关键字{}条数据'.format(len(words_lists)))
         df_words = pd.DataFrame(words_lists)
-        words_valid_dict = dict(pd.value_counts(df_words[0]))
+
+        # 语言频次分析
+        df_key_words = df_words[df_words[0].isin(KEY_LANGUAGE)]
+        # 计算频次
+        words_count = pd.value_counts(df_key_words[0])
+        # 写入csv
+        # words_count.to_csv('{}.csv'.format('count_words'), encoding="utf-8")
+        # 转化为字典
+        words_valid_dict = dict(words_count)
+        words_valid_dict = self.merge_letter(words_valid_dict)
         words_data = sorted(words_valid_dict.items(), key=lambda x: x[1], reverse=True)
-        res_words_data = dict(words_data[:9])
-        print(res_words_data)
+        res_words_data = dict(words_data)
         return res_words_data
+
+    @staticmethod
+    def merge_letter(letter_dict):
+        """
+
+        :param letter_dict:
+        :return:返回小写字母组成的数字
+        """
+        new_dict = {}
+        for key, value in letter_dict.items():
+            if key.lower() in new_dict:
+                new_dict[key.lower()] += value
+            else:
+                new_dict[key.lower()] = value
+        return new_dict
 
     def read_json(self):
         """
@@ -99,7 +119,6 @@ class HandlerData(object):
     @count_time
     def multi_job_info(self):
         """多进程解析数据"""
-        # TODO 多进程 解析数据
         results = []
         po = Pool(POOL_NUMBER)  # 定义一个进程池
         get_size = len(self.job_info_file)

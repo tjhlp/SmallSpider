@@ -78,7 +78,7 @@ class HandlerData(object):
         if go_lang_count is not None:
             del new_dict['golang']
             new_dict['go'] += go_lang_count
-        print(new_dict)
+        # print(new_dict)
         return new_dict
 
     def read_json(self):
@@ -143,13 +143,18 @@ class HandlerData(object):
         return job_list
 
     @staticmethod
-    def plot_data(company_data, filenames):
+    def plot_data(company_data, filenames, index):
         """
         将信息（公司与职位信息）可视化
         :param company_data: （公司与职位数量）以键值对信息传入
         :param filenames: 保存文件的位置
         :return: None
         """
+        # 标注
+        label_dict = {
+            '标注': ['职位数量', '语言数量'],
+            '标题': ['公司招聘职位', '公司其他语言要求']
+        }
         company_list = []
         y_core = []
         for key, value in company_data.items():
@@ -158,13 +163,13 @@ class HandlerData(object):
         # plt.figure(figsize=(20, 8), dpi=80)
         plt.rcParams['figure.figsize'] = (15.0, 8.0)  # 显示大小
         x_cor = [x for x in range(len(company_list))]
-        plt.barh(x_cor, y_core, facecolor='orange', height=0.3, label='职位数量')
+        plt.barh(x_cor, y_core, facecolor='orange', height=0.3, label=label_dict['标注'][index])
         # 添加数字标号
         for score, pos in zip(y_core, x_cor):
             plt.text(score + 2, pos, '%d' % score)
         plt.yticks(x_cor, company_list)
         plt.grid(alpha=0.3)
-        # plt.xlabel('公司招聘职位')
+        plt.xlabel(label_dict['标题'][index])
         plt.savefig(filenames)
         plt.legend(loc='best')
         plt.show()
@@ -182,8 +187,8 @@ class HandlerData(object):
         job_info_data = self.count_words(job_list)
 
         # 画图
-        self.plot_data(res_company_data, './company.jpg')
-        self.plot_data(job_info_data, './job_info.jpg')
+        self.plot_data(res_company_data, './company.jpg', 0)
+        self.plot_data(job_info_data, './job_info.jpg', 1)
 
 
 if __name__ == '__main__':

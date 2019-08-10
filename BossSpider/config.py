@@ -7,7 +7,8 @@ REQUEST_HEADERS = {
     # 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
 }
 KEY_WORD = ['爬虫', '算法', 'Linux', '人工智能', 'Django', 'Flask', 'MySQL', 'C++', 'linux', 'mysql', 'django', 'flask']
-KEY_LANGUAGE = ['Python', 'MySQL', 'C++', 'Linux', 'PHP', 'Javascript', 'Java', 'Git', 'Shell', 'Go', 'Golang', 'C', 'Ruby', 'python', 'mysql', 'c++', 'linux', 'php', 'javascript', 'java', 'git', 'shell', 'go', 'golang', 'c', 'ruby']
+# 取出 python
+KEY_LANGUAGE = ['MySQL', 'C++', 'Linux', 'PHP', 'Javascript', 'Java', 'Git', 'Shell', 'Go', 'Golang', 'C', 'Ruby', 'mysql', 'c++', 'linux', 'php', 'javascript', 'java', 'git', 'shell', 'go', 'golang', 'c', 'ruby']
 
 KEY_WORD_YEAR = ['一年以上', '两年以上', '三年以上', '三到五年']
 KEY_WORD_BACKGROUND = ['一本', '二本', '985', '211', '本科学历']

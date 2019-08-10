@@ -45,17 +45,17 @@ class HandlerData(object):
         :param words_lists:
         :return:
         """
+        # TODO 工作年龄分析
         print('开始数据清洗，统计关键字{}条数据'.format(len(words_lists)))
         df_words = pd.DataFrame(words_lists)
-
         # 语言频次分析
         df_key_words = df_words[df_words[0].isin(KEY_LANGUAGE)]
-        # 计算频次
-        words_count = pd.value_counts(df_key_words[0])
-        # 写入csv
-        # words_count.to_csv('{}.csv'.format('count_words'), encoding="utf-8")
+        words_key_count = pd.value_counts(df_key_words[0])
+        # 所有频次分析
+        words_count = pd.value_counts(df_words[0])
+        words_count.to_csv('{}.csv'.format('count_words'), encoding="utf-8")
         # 转化为字典
-        words_valid_dict = dict(words_count)
+        words_valid_dict = dict(words_key_count)
         words_valid_dict = self.merge_letter(words_valid_dict)
         words_data = sorted(words_valid_dict.items(), key=lambda x: x[1], reverse=True)
         res_words_data = dict(words_data)
@@ -74,6 +74,11 @@ class HandlerData(object):
                 new_dict[key.lower()] += value
             else:
                 new_dict[key.lower()] = value
+        go_lang_count = new_dict.get('golang')
+        if go_lang_count is not None:
+            del new_dict['golang']
+            new_dict['go'] += go_lang_count
+        print(new_dict)
         return new_dict
 
     def read_json(self):
@@ -111,8 +116,9 @@ class HandlerData(object):
         participle_data = []
         print('子进程：{} 开始统计'.format(os.getpid()))
         for job_comp in job_div_info:
-            a = job_comp.get('job_text')
-            participle_data.extend(jieba.lcut(a))
+            job_text = job_comp.get('job_text')
+            cut_words = jieba.lcut(job_text)
+            participle_data.extend(cut_words)
         print('子进程：{} 统计完成'.format(os.getpid()))
         return participle_data
 
@@ -170,11 +176,13 @@ class HandlerData(object):
         print('总共{}家公司'.format(len(pr_company_data)))
         company_data = sorted(pr_company_data.items(), key=lambda x: x[1], reverse=True)
         res_company_data = dict(company_data[:9])
-        self.plot_data(res_company_data, './company.jpg')
 
         # 职位信息统计,取出计数排名前10的关键词
         job_list = self.multi_job_info()
         job_info_data = self.count_words(job_list)
+
+        # 画图
+        self.plot_data(res_company_data, './company.jpg')
         self.plot_data(job_info_data, './job_info.jpg')
 
 

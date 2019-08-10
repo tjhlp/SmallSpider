@@ -43,7 +43,6 @@ def func(str_list):
 @count_time
 def pd_func(str_list):
     df_a = pd.DataFrame(str_list)
-    # df_b = pd.value_counts(df_a[0])
     df_c = dict(pd.value_counts(df_a[0]))
     print(df_c)
 

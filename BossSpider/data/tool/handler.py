@@ -42,8 +42,8 @@ class HandlerData(object):
     def count_words(self, words_lists):
         """
         数据清洗出现文字重复次数的数据（词频分析）
-        :param words_lists:
-        :return:
+        :param words_lists:所有分词的列表
+        :return:关键词列表
         """
         # TODO 工作年龄分析
         print('开始数据清洗，统计关键字{}条数据'.format(len(words_lists)))
@@ -90,7 +90,7 @@ class HandlerData(object):
         paths = os.listdir(self.file)
         for path in paths:
             if re.match(r'2019', path):
-                with open(path, 'r', encoding='gbk')as f:
+                with open('../' + path, 'r', encoding='gbk')as f:
                     content = json.loads(f.read())
                     for job_info in content:
                         if job_info['job_name']:
@@ -112,6 +112,11 @@ class HandlerData(object):
 
     @staticmethod
     def salary_classification(salary_dict):
+        """
+        将薪水数据进行清洗：15-24K    统一算作20-25K这一档
+        :param salary_dict: {‘薪水标注’：职位数}
+        :return: 排列，统计好的数据
+        """
         salary_standard_dict = {'0-5k': 0, '5-10k': 0, '10-15k': 0, '15-20k': 0, '20-25k': 0, '25k-30k': 0, '30k以上': 0}
         index_list = ['0-5k', '5-10k', '10-15k', '15-20k', '20-25k', '25k-30k', '30k以上']
 
@@ -213,12 +218,12 @@ class HandlerData(object):
         job_info_data = self.count_words(job_list)
 
         # 画图
-        self.plot_data(res_company_data, './company.jpg', 0)
-        self.plot_data(job_info_data, './job_info.jpg', 1)
-        self.plot_data(res_salary_data, './job_salary.jpg', 2)
+        self.plot_data(res_company_data, 'jpg/company.jpg', 0)
+        self.plot_data(job_info_data, 'jpg/job_info.jpg', 1)
+        self.plot_data(res_salary_data, 'jpg/job_salary.jpg', 2)
 
 
 if __name__ == '__main__':
-    hd = HandlerData('../data')
+    hd = HandlerData('../../data/')
     hd.run()
     # hd.plot_data(dict(TEST_COMPANY[:20]), './company.jpg')

@@ -1,7 +1,7 @@
 # 访问页面总数
 BOSS_PAGE_NUM = 9
-BOOS_URL = 'https://www.zhipin.com/job_detail/?query=python%E5%B7%A5%E7%A8%8B%E5%B8%88&city=101280600&industry=&position='
-BOOS_URL_FOLLOW = 'https://www.zhipin.com/c101280600/?query=python%E5%B7%A5%E7%A8%8B%E5%B8%88&'
+BOOS_URL = 'https://www.zhipin.com/job_detail/?query=python%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88&city=101280600&industry=&position='
+BOOS_URL_FOLLOW = 'https://www.zhipin.com/c101280600/?query=python%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88&'
 REQUEST_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
     # 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'

@@ -99,16 +99,36 @@ class HandlerData(object):
     # {'job_name': 'Python高级工程师', 'job_salary': '25-50K', 'job_text': '职位要求：\n1、负责外部公',
     # 'company_name': '深圳市星商电子商务有限公司', 'job_location': '深圳龙岗区云里智能园4栋2楼'}
 
-    def company_classification(self):
-        """统计公司数据"""
+    def data_classification(self, search_info):
+        """统计公司数据和薪水统计"""
         company_dict = {}
         for job_comp in self.job_info_file:
-            company_name = job_comp.get('company_name')
+            company_name = job_comp.get(search_info)
             if company_name in company_dict:
                 company_dict[company_name] += 1
             else:
                 company_dict[company_name] = 1
         return company_dict
+
+    @staticmethod
+    def salary_classification(salary_dict):
+        salary_standard_dict = {'0-5k': 0, '5-10k': 0, '10-15k': 0, '15-20k': 0, '20-25k': 0, '25k-30k': 0, '30k以上': 0}
+        index_list = ['0-5k', '5-10k', '10-15k', '15-20k', '20-25k', '25k-30k', '30k以上']
+
+        for key, value in salary_dict.items():
+            if not re.match('.*?[天]', key):
+                re_key = re.match('^([0-9]{0,3})-([0-9]{0,3})', key)
+                data = re_key.group()
+                data_spl = data.split('-')
+                lower_salary = int(data_spl[0])
+                upper_salary = int(data_spl[1])
+                level = int(lower_salary / 5)
+                if upper_salary - lower_salary > 5:
+                    level += 1
+                if level > 6:
+                    level = 6
+                salary_standard_dict[index_list[level]] += value
+        return salary_standard_dict
 
     @staticmethod
     def job_info_classification(job_div_info):
@@ -152,8 +172,8 @@ class HandlerData(object):
         """
         # 标注
         label_dict = {
-            '标注': ['职位数量', '语言数量'],
-            '标题': ['公司招聘职位', '公司其他语言要求']
+            '标注': ['职位数量', '语言数量', '职位数量'],
+            '标题': ['公司职位数目分布图', '其他语言分布图', '薪水分布图']
         }
         company_list = []
         y_core = []
@@ -175,12 +195,18 @@ class HandlerData(object):
         plt.show()
 
     def run(self):
-        # 公司数据统计
+        # 读取数据
         self.read_json()
-        pr_company_data = self.company_classification()
+        # 公司数据统计
+        pr_company_data = self.data_classification('company_name')
         print('总共{}家公司'.format(len(pr_company_data)))
         company_data = sorted(pr_company_data.items(), key=lambda x: x[1], reverse=True)
         res_company_data = dict(company_data[:9])
+
+        # 薪水统计
+        pr_company_salary = self.data_classification('job_salary')
+        order_salary = self.salary_classification(pr_company_salary)
+        res_salary_data = dict(order_salary)
 
         # 职位信息统计,取出计数排名前10的关键词
         job_list = self.multi_job_info()
@@ -189,6 +215,7 @@ class HandlerData(object):
         # 画图
         self.plot_data(res_company_data, './company.jpg', 0)
         self.plot_data(job_info_data, './job_info.jpg', 1)
+        self.plot_data(res_salary_data, './job_salary.jpg', 2)
 
 
 if __name__ == '__main__':

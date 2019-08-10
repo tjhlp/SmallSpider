@@ -8,6 +8,7 @@ from multiprocessing import Pool
 from config import REQUEST_HEADERS
 
 test_list = []
+MAX_COUNT = 3
 
 
 def read_text():
@@ -25,21 +26,20 @@ def save_text(content):
 
 def save_json(ip_ports, filename):
     # ip_ports = [["123.213.123.432", "24"], ["132.123.123.434", "80"]]
-    if os.path.exists('valid_ip'):
-        try:
-            with open(filename, 'r')as r:
-                content = json.loads(r.read())
-            for index in range(len(ip_ports)):
-                list_data = ip_ports[index]
-                content.append(list_data)
-        except:
-            content = ip_ports
-
-        with open(filename, 'w')as w:
-            res = json.dumps(content)
-            w.write(res)
-    else:
+    if not os.path.exists('valid_ip'):
         os.mkdir('valid_ip')
+    try:
+        with open(filename, 'r')as r:
+            content = json.loads(r.read())
+        for index in range(len(ip_ports)):
+            list_data = ip_ports[index]
+            content.append(list_data)
+    except:
+        content = ip_ports
+
+    with open(filename, 'w')as w:
+        res = json.dumps(content)
+        w.write(res)
 
 
 def get_html(url):
@@ -102,18 +102,24 @@ def test_ip(ip_lists):
         ip_port = []
         df_ip = ip_lists.iloc[index][0]
         ip_list = eval(df_ip)
-        try:
-            # 连接Telnet服务器
-            # 判断响应时间
-            tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
-            # pass
-        except:
-            print('第{}个代理IP:{}:{}无效,当前：{} '.format(index+1, ip_list[0], int(ip_list[1]), present_name))
-        else:
-            ip_port.append(ip_list[0])
-            ip_port.append(ip_list[1])
-            valid_list.append(ip_port)
-            print('第{}个代理IP:{}有效,当前：{}'.format(index+1, ip_list[0], present_name))
+        count = 0
+        while True:
+            try:
+                # 连接Telnet服务器
+                tn = telnetlib.Telnet(ip_list[0], port=int(ip_list[1]), timeout=100)
+            except:
+                if count < MAX_COUNT:
+                    count += 1
+                    continue
+                else:
+                    print('第{}个代理IP:{}:{}三次测试无效,再次测试,当前线程：{} '.format(index + 1, ip_list[0], int(ip_list[1]), present_name))
+                    break
+            else:
+                ip_port.append(ip_list[0])
+                ip_port.append(ip_list[1])
+                valid_list.append(ip_port)
+                print('第{}个代理IP:{}有效,当前：{}'.format(index + 1, ip_list[0], present_name))
+                break
 
     name = 'valid_ip/' + 'valid_ip' + present_name[-2:]
     save_json(valid_list, name + '.json')

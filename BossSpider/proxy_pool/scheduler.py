@@ -22,8 +22,8 @@ class RunProxy(object):
         self.df_ip = None
         self.ip = None
         self.port = None
-        self.__generate_url()
         self.proxy_list = []
+        self.__generate_url()
 
     @staticmethod
     def __generate_url():
@@ -43,7 +43,6 @@ class RunProxy(object):
             get_ip_port = self.ip + ':' + self.port
             return get_ip_port
         return ReferenceError('你必须先运行run方法')
-
 
     @staticmethod
     def run_test_ip():
@@ -71,6 +70,10 @@ class RunProxy(object):
         save_json(self.proxy_list, 'valid_ip.json')
 
     def run(self):
+        """
+        self.model: 读取模式（False），写入模式（True）
+        :return:
+        """
         if self.model:
             for proxy_url in PROXY_URLS:
                 time.sleep(random.randint(2, 5))

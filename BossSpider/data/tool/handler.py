@@ -7,7 +7,7 @@ import time
 from multiprocessing import Pool
 import matplotlib.pyplot as plt
 import pandas as pd
-from config import TEST_COMPANY, KEY_LANGUAGE
+from config import KEY_LANGUAGE
 
 POOL_NUMBER = 2
 

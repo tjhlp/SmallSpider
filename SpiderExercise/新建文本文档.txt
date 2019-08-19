@@ -1,4 +1,8 @@
-"xx":" ",
-"uni":" 到",
-"screenWidth":" 180",
-"bias":" Simplified",
+获取所有的 <li> 标签
+获取所有 <a> 标签的内容
+继续获取 <li> 标签的所有 class 属性
+继续获取 <li> 标签下 href 为 link1.html 的 <a> 标签
+获取 <li> 标签下的所有 <span> 标签
+获取 <li> 标签下的 <a> 标签里的所有 class
+获取最后一个 <li> 的 <a> 的 href
+获取倒数第二个li元素的内容

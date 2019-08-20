@@ -21,10 +21,17 @@ ret = html.xpath('//li/a[@href="link1.html"]')
 # ret = html.xpath('//li[last()]/a/@href')
 # ret = html.xpath('//li[last()-1]//text()')
 print(ret)
+a = [1, 2, 3, 4]
+b = [2, 3, 4, 5]
+print(set(a)&set(b))
+print(set(a)|set(b))
+print(set(a)^set(b))
+import random
 
+x = [i for i in range(10)]
 
+print(x)
 
+random.shuffle(x)
 
-
-
-
+print(x)

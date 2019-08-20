@@ -63,7 +63,6 @@ class WangYISpider(object):
             item_list = self.get_item(html)
             item_sum.extend(item_list)
         self.save_item(item_sum)
-            # break
 
 
 if __name__ == '__main__':

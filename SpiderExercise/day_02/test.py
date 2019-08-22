@@ -1,6 +1,1 @@
-import time
-
-start_time = time.time()
-end_time = time.time()
-print(end_time - start_time)
-print('总共用时: ',(end_time - start_time))
+print([x for x in range(1, 101) if x % 2 == 0])

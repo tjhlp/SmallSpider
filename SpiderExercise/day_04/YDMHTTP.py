@@ -89,26 +89,25 @@ class YDMHttp:
 
 ######################################################################
 
-# 用户名
-username    = '18616358651'
 
-# 密码
-password    = 'qwer1234'
+def boxuegu(png):
+    # 用户名
+    username    = '18616358651'
 
-# 软件ＩＤ，开发者分成必要参数。登录开发者后台【我的软件】获得！
-appid       = 4999
+    # 密码
+    password    = 'qwer1234'
 
-# 软件密钥，开发者分成必要参数。登录开发者后台【我的软件】获得！
-appkey      = '41a84e5795034890d8a7f2cde1d5910b'
+    # 软件ＩＤ，开发者分成必要参数。登录开发者后台【我的软件】获得！
+    appid       = 4999
 
-
-def decode(filename,codetype):
+    # 软件密钥，开发者分成必要参数。登录开发者后台【我的软件】获得！
+    appkey      = '41a84e5795034890d8a7f2cde1d5910b'
 
     # 图片文件
-    # filename    = 'test1.png'
+    filename    = png
 
     # 验证码类型，# 例：1004表示4位字母数字，不同类型收费不同。请准确填写，否则影响识别率。在此查询所有类型 http://www.yundama.com/price.html
-    # codetype    = 6701
+    codetype    = 6300
 
     # 超时时间，秒
     timeout     = 60
@@ -131,6 +130,7 @@ def decode(filename,codetype):
         # 开始识别，图片路径，验证码类型ID，超时时间（秒），识别结果
         cid, result = yundama.decode(filename, codetype, timeout);
         print('cid: %s, result: %s' % (cid, result))
-        return result
+    return result
+
 
 ######################################################################

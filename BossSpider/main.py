@@ -1,13 +1,9 @@
 from core import RunBossSpider
 from data.tool.handler import HandlerData
-from proxy_pool.scheduler import RunProxy
 
 
 def run_proxy():
-    proxy_per = RunProxy('ip.csv', model=True)
-    proxy_per.run()
-    proxy_per.run_test_ip()
-    proxy_per.merge_json_file()
+    pass
 
 
 def main():

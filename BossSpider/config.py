@@ -19,10 +19,4 @@ PROXY_PAGE_NUM = 30
 PROXY_URL_BASIC = 'https://www.xicidaili.com/nn/'
 PROXY_URLS = []
 
-# 测试是否使用代理的网站
-TEST_IP_HTML = 'http://httpbin.org/get'
-
-# 测试ip开启的线程池的数目
-TEST_POOL_NUM = 10
-
 

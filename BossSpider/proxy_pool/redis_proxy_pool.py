@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!C:\Program Files\Python36.exe
 # -*- coding: utf-8 -*-
 
 
-from proxy_pool import settings
+import settings
 import redis
 from random import choice
 

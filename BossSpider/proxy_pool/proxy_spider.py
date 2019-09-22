@@ -1,12 +1,13 @@
-#!/usr/bin/python3
+#!C:\Program Files\Python36.exe
 # -*- coding: utf-8 -*-
 
 
 import importlib
 
-from proxy_pool import settings
+import settings
 
-from proxy_pool import redis_proxy_pool
+
+import redis_proxy_pool
 
 
 class ProxySpider(object):

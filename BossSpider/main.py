@@ -1,6 +1,6 @@
 from core import RunBossSpider
 from data.tool.handler import HandlerData
-
+import flask
 
 def run_proxy():
     pass
@@ -17,5 +17,5 @@ def main():
 
 
 if __name__ == '__main__':
-    run_proxy()
-    # main()
+    # run_proxy()
+    main()

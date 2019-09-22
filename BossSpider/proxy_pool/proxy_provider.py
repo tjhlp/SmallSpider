@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!C:\Program Files\Python36.exe
 # -*- coding: utf-8 -*-
 
 from flask import Flask

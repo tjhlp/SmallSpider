@@ -10,7 +10,7 @@ from datetime import datetime
 from pyquery import PyQuery as pq
 from html_control import parse_one_job, parse_one_page, RejectedException
 from file_control import save_job_json, save_text_file
-from config import BOOS_URL, REQUEST_HEADERS, TEST_IP_HTML, BOOS_URL_FOLLOW, BOSS_PAGE_NUM
+from config import BOOS_URL, REQUEST_HEADERS, BOOS_URL_FOLLOW, BOSS_PAGE_NUM
 
 JOB_INFO_POOL_NUM = 4
 SAVE_HTML_DIR = 'html/job/'

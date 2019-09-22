@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-
 import importlib
 
 from proxy_pool import settings
 
 from proxy_pool import redis_proxy_pool
+
 
 class ProxySpider(object):
     def __init__(self):
@@ -42,15 +42,15 @@ class ProxySpider(object):
                 proxies = spider.get_proxies()
                 if proxies is not None:
                     for proxy in proxies:
-                        print("爬取代理",proxy,"添加到代理池中")
+                        print("爬取代理", proxy, "添加到代理池中")
                         self.pool.add(proxy)
             except Exception as e:
                 print(e)
-                print("爬虫",spider,"出现错误")
-
+                print("爬虫", spider, "出现错误")
 
     def run(self):
         self.process_proxy_spiders()
+
 
 if __name__ == '__main__':
     spider = ProxySpider()

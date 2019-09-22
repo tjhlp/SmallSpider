@@ -77,7 +77,7 @@ class ProxyTester(object):
             self.queue.put(proxy)
 
         for i in range(20):
-            self.pool.apply_async(self._test_proxy,callback=self._test_proxy_finish)
+            self.pool.apply_async(self._test_proxy, callback=self._test_proxy_finish)
 
         self.queue.join()
 

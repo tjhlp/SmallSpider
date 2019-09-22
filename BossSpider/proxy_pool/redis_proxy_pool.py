@@ -15,7 +15,7 @@ class RedisProxyPool(object):
     '''
     和 redis 交互
     
-    '''
+'''
 
     def __init__(self, host=settings.REDIS_HOST, port=settings.REDIS_PORT):
         self.db = redis.StrictRedis(host=host, port=port, decode_responses=True)

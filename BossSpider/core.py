@@ -28,13 +28,6 @@ class RunBossSpider(object):
         if self.is_proxy:
             self.__load_proxy()
 
-    def __load_proxy(self):
-        try:
-            with open(PROXY_PATH, 'r')as r:
-                self.proxy_list = json.loads(r.read())
-        except:
-            self.proxy_list = []
-        print('导入代理ip:{}个'.format(len(self.proxy_list)))
 
     def __generate_url(self):
         #  page=2&ka=page-2

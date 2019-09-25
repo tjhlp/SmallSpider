@@ -1,9 +1,20 @@
 from core import RunBossSpider
 from data.tool.handler import HandlerData
-import flask
+from flask import Flask
+
 
 def run_proxy():
     pass
+
+
+def run_web():
+    app = Flask(__name__)
+
+    @app.route('/')
+    def index():
+        return 'Hello World'
+
+    app.run()
 
 
 def main():
@@ -18,4 +29,5 @@ def main():
 
 if __name__ == '__main__':
     # run_proxy()
-    main()
+    # main()
+    run_web()

@@ -18,10 +18,6 @@ def count_time(func):
     return inner
 
 
-c = ['cdadf', '法撒旦', '我', '哈哈', 'werwq', 'asfweq', 'qwerqwe', 'asfdas', 'asdf', 'asdfas', '她与他', 'werewolf', 'safd',
-     '委任为', '五七二']
-
-
 @count_time
 def generate_str_list():
     a = []
@@ -46,7 +42,3 @@ def pd_func(str_list):
     df_c = dict(pd.value_counts(df_a[0]))
     print(df_c)
 
-
-a = generate_str_list()
-pd_func(a)
-func(a)

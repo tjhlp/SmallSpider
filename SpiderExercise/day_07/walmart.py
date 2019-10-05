@@ -11,7 +11,7 @@ def write_csv(index, mult_data, filename):
     :param mult_data: 写入的数据（二维列表）
     :return:
     """
-    with open(filename, 'w') as csv_file:
+    with open(filename, 'w', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(index)
         for data in mult_data:
@@ -23,8 +23,8 @@ options = webdriver.ChromeOptions()
 # 切换User-Agent
 options.add_argument(
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
-options.add_argument('--headless')  # 开启无界面模式
-options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题
+# options.add_argument('--headless')  # 开启无界面模式
+# options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题
 # 导入驱动程序
 browser = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
 
@@ -44,6 +44,7 @@ mult_data = []
 count = 1
 while count <= page:
     try:
+        print(html.format(count, search))
         browser.get(html.format(count, search))
     except:
         break

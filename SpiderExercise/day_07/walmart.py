@@ -45,7 +45,10 @@ count = 1
 while count <= page:
     try:
         print(html.format(count, search))
+        # 页面路径样本（按照关键词）
         browser.get(html.format(count, search))
+        # 页面路径样本（按照分类）
+        # browser.get(html.format(count))
     except:
         break
     browser.execute_script("var q=document.documentElement.scrollTop=100000")

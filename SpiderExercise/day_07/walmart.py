@@ -36,6 +36,10 @@ page = 2
 filename = search + '.csv'
 # 页面路径样本（按照关键词）
 html = 'https://www.walmart.com/search/?cat_id=0&page={}&ps=40&query={}'
+
+"""
+搜索关键词不用改，搜索分类的话需要更换网址，第一步注释掉38行和52行的代码，打开44行和54行的代码然后填入分类的网址
+"""
 # 页面路径样本（按照分类）
 # html = 'https://www.walmart.com/browse/musical-instruments/par-cans/7796869_3896240_1725737?page={}'
 
@@ -44,7 +48,6 @@ mult_data = []
 count = 1
 while count <= page:
     try:
-        print(html.format(count, search))
         # 页面路径样本（按照关键词）
         browser.get(html.format(count, search))
         # 页面路径样本（按照分类）

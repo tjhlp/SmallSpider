@@ -23,8 +23,8 @@ options = webdriver.ChromeOptions()
 # 切换User-Agent
 options.add_argument(
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
-options.add_argument('--headless')  # 开启无界面模式
-options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题
+# options.add_argument('--headless')  # 开启无界面模式
+# options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题
 # 导入驱动程序
 browser = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
 
@@ -35,7 +35,7 @@ page = 2
 # 存储的文件名
 filename = search + '.csv'
 # 页面路径样本（按照关键词）
-html = 'https://www.walmart.com/search/?cat_id=0&page={}&ps=40&query={}'
+html = 'https://www.walmart.com/search/?cat_id=0&page={}&0.ps=40&query={}'
 
 """
 搜索关键词不用改，搜索分类的话需要更换网址，第一步注释掉38行和52行的代码，打开44行和54行的代码然后填入分类的网址
@@ -63,6 +63,7 @@ while count <= page:
             price = li.find_element_by_xpath('.//span[@class="price-main-block"]/span/span').text
         except Exception as e:
             price = 'none'
+            shop_id = 'none'
         star_rev = li.find_element_by_xpath('.//div[@class="stars stars-small"]/span').get_attribute("aria-label")
         pattern = re.match('(.*?)Stars. (.*?)reviews', star_rev)
         star = pattern.group(1)
@@ -71,14 +72,14 @@ while count <= page:
             "href")
         wal_id = id_http[id_http.rfind('/') + 1:]
         page_id = count
-        data = [wal_id, name, price, star, reviews, page_id]
+        data = [wal_id, name, price, star, reviews, page_id, id_http]
         mult_data.append(data)
 
-    print('第{}页爬取完成'.format(count))
+    print('第{}页爬取数据完成'.format(count))
     count += 1
     time.sleep(0.5)
 
-indexes = ['id', 'name', 'price', 'star', 'review', 'page']
+indexes = ['id', 'name', 'price', 'star', 'review', 'page','http']
 print(mult_data)
 write_csv(indexes, mult_data, filename)
 browser.quit()

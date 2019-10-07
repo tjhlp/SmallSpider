@@ -40,9 +40,10 @@ html = 'https://www.walmart.com/ip/Ball-Projector-DJ-Remote-7-3w-Activated-Contr
 
 browser.get(html)
 
+shop_name = browser.find_elements_by_xpath('.//a[@class="prod-brandName"]/span')[0].text
 li_list = browser.find_elements_by_xpath('.//ol[@class="breadcrumb-list"]//li')
-shop_name = browser.find_element_by_xpath('./a[@class="prod-brandName"]/span').text
-shop_highlights = browser.find_element_by_xpath('.//div[@data-tl-id="ProductPage-ProductHighlights"]/div/ul//li')
+print(shop_name)
+shop_highlights = browser.find_elements_by_xpath('.//div[@data-tl-id="ProductPage-ProductHighlights"]/div/ul//li')
 
 highlight_list = [highlight.text for highlight in shop_highlights]
 name_list = [li.find_element_by_xpath('./a/span').text for li in li_list]

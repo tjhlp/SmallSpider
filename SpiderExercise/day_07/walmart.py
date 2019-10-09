@@ -1,85 +1,94 @@
+import gevent.monkey
 import time
 import re
-from selenium import webdriver
-import csv
+from queue import Queue
+
+gevent.monkey.patch_all()
+from gevent.pool import Pool
+
+from walmart_details import getitemdetai
+from config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX
+from init import browser
+from tool import write_csv, generate_url
 
 
-def write_csv(index, mult_data, filename):
-    """
-
-    :param index: 列名（list）
-    :param mult_data: 写入的数据（二维列表）
-    :return:
-    """
-    with open(filename, 'w', encoding='utf-8') as csv_file:
-        writer = csv.writer(csv_file)
-        writer.writerow(index)
-        for data in mult_data:
-            writer.writerow(data)
+url_list = generate_url(HTML, PAGE, SEARCH_NAME)
 
 
-# 初始化驱动程序
-options = webdriver.ChromeOptions()
-# 切换User-Agent
-options.add_argument(
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
-# options.add_argument('--headless')  # 开启无界面模式
-# options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题
-# 导入驱动程序
-browser = webdriver.Chrome('./chromedriver.exe', chrome_options=options)
+class WalmartSpider:
 
-# 输入关键词
-search = 'Party Lights'
-# 需要爬取的页面数量
-page = 2
-# 存储的文件名
-filename = search + '.csv'
-# 页面路径样本（按照关键词）
-html = 'https://www.walmart.com/search/?cat_id=0&page={}&0.ps=40&query={}'
+    def __init__(self):
 
-"""
-搜索关键词不用改，搜索分类的话需要更换网址，第一步注释掉38行和52行的代码，打开44行和54行的代码然后填入分类的网址
-"""
-# 页面路径样本（按照分类）
-# html = 'https://www.walmart.com/browse/musical-instruments/par-cans/7796869_3896240_1725737?page={}'
+        self.pool = Pool(5)
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+        }
 
+        # 专门存放 url 容器
+        self.url_queue = Queue()
 
-mult_data = []
-count = 1
-while count <= page:
-    try:
-        # 页面路径样本（按照关键词）
-        browser.get(html.format(count, search))
-        # 页面路径样本（按照分类）
-        # browser.get(html.format(count))
-    except:
-        break
-    browser.execute_script("var q=document.documentElement.scrollTop=100000")
-    li_list = browser.find_elements_by_xpath('//ul[@class="search-result-gridview-items four-items"]/li')
-    for li in li_list:
-        name = li.find_element_by_xpath('.//div[@class="search-result-product-title gridview"]/a').get_attribute(
-            "title")
+    def generate_url(self):
+        return generate_url(HTML, PAGE, SEARCH_NAME)
+
+    def main(html):
+        item_range = 0
         try:
-            price = li.find_element_by_xpath('.//span[@class="price-main-block"]/span/span').text
-        except Exception as e:
-            price = 'none'
-            shop_id = 'none'
-        star_rev = li.find_element_by_xpath('.//div[@class="stars stars-small"]/span').get_attribute("aria-label")
-        pattern = re.match('(.*?)Stars. (.*?)reviews', star_rev)
-        star = pattern.group(1)
-        reviews = pattern.group(2)
-        id_http = li.find_element_by_xpath('.//div[@class="search-result-productimage gridview"]/div/a').get_attribute(
-            "href")
-        wal_id = id_http[id_http.rfind('/') + 1:]
-        page_id = count
-        data = [wal_id, name, price, star, reviews, page_id, id_http]
-        mult_data.append(data)
+            # 页面路径样本（按照关键词）
+            browser.get(html)
+            # 页面路径样本（按照分类）
+            # browser.get(html.format(count))
+        except:
+            pass
+        browser.execute_script("var q=document.documentElement.scrollTop=100000")
+        li_list = browser.find_elements_by_xpath('//ul[@class="search-result-gridview-items four-items"]/li')
+        for li in li_list:
+            name = li.find_element_by_xpath('.//div[@class="search-result-product-title gridview"]/a').get_attribute(
+                "title")
+            try:
+                price = li.find_element_by_xpath('.//span[@class="price-main-block"]/span/span').text
+            except Exception as e:
+                price = 'none'
+            star_rev = li.find_element_by_xpath('.//div[@class="stars stars-small"]/span').get_attribute("aria-label")
+            pattern = re.match('(.*?)Stars. (.*?)reviews', star_rev)
+            main_image = li.find_element_by_xpath('.//div[@class="search-result-productimage gridview"]/div/a/img'). \
+                get_attribute("data-image-src")
+            star = pattern.group(1)
+            reviews = pattern.group(2)
+            id_href = li.find_element_by_xpath(
+                './/div[@class="search-result-productimage gridview"]/div/a').get_attribute(
+                "href")
+            # 限制爬取详情信息的数量，只爬取item_detail_max条
+            if item_range < PAGE_DETAIL_MAX:
+                item_detail = getitemdetai(id_href)
+            else:
+                item_detail = {'brand': '-', 'category': '-', 'highlights': '-'}
+            item_range = item_range + 1
 
-    print('第{}页爬取数据完成'.format(count))
-    count += 1
-    time.sleep(0.5)
+            # try:
+            #     shop_name = li.find_element_by_xpath('.//span[@class="marketplace-sold-by-company-name"]').text
+            # except Exception as e:
+            #     shop_name = 'none'
 
-indexes = ['id', 'name', 'price', 'star', 'review', 'page','http']
+            wal_id = id_href[id_href.rfind('/') + 1:]
+            data = [item_range, wal_id, id_href, name, price, star, reviews, page_id, item_detail['store'], main_image,
+                    item_detail['brand'], item_detail['category'], item_detail['highlights']]
+            mult_data.append(data)
+
+        time.sleep(1)
+
+    def exec_task_finished(self, result):
+        print("result:", result)
+        print("执行任务完成")
+        self.pool.apply_async(self.exec_task, callback=self.exec_task_finished)
+
+    def run(self):
+        for i in range(5):
+            pool.apply_async(self.exec_task_finished, callback=self.exec_task_finished)
+        url_queue.join()
+
+
+indexes = ['Range', 'Id', 'Url', 'Name', 'Price', 'Star', 'Review', 'Page', 'Shop name', 'Main image url', 'brand',
+           'category', 'highlights']
 print(mult_data)
-write_csv(indexes, mult_data, filename)
+write_csv(indexes, mult_data, FILE_NAME)
 browser.quit()

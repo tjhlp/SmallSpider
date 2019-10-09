@@ -1,47 +1,53 @@
 import gevent.monkey
-import time
-import re
-from queue import Queue
 
 gevent.monkey.patch_all()
 from gevent.pool import Pool
 
+import time
+import re
+import random
+from queue import Queue
 from walmart_details import getitemdetai
 from config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX
 from init import browser
-from tool import write_csv, generate_url
-
-
-url_list = generate_url(HTML, PAGE, SEARCH_NAME)
+from tool import write_csv, generate_url, count_time
 
 
 class WalmartSpider:
 
     def __init__(self):
 
+        # 创建线程池，初始化线程数量
         self.pool = Pool(5)
+        # 头部用户
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
         }
-
         # 专门存放 url 容器
         self.url_queue = Queue()
 
     def generate_url(self):
-        return generate_url(HTML, PAGE, SEARCH_NAME)
+        url_list = generate_url(HTML, PAGE, SEARCH_NAME)
+        for url in url_list:
+            self.url_queue.put(url)
 
-    def main(html):
+    @count_time
+    def exec_task(self):
+        get_data = self.url_queue.get()
+        cur_page = get_data[0]
+        url = get_data[1]
+        print('第{}页开始采集数据'.format(cur_page))
+        mult_data = []
         item_range = 0
         try:
             # 页面路径样本（按照关键词）
-            browser.get(html)
-            # 页面路径样本（按照分类）
-            # browser.get(html.format(count))
+            browser.get(url)
         except:
-            pass
+            return 0
         browser.execute_script("var q=document.documentElement.scrollTop=100000")
         li_list = browser.find_elements_by_xpath('//ul[@class="search-result-gridview-items four-items"]/li')
         for li in li_list:
+            item_range += 1
             name = li.find_element_by_xpath('.//div[@class="search-result-product-title gridview"]/a').get_attribute(
                 "title")
             try:
@@ -58,7 +64,7 @@ class WalmartSpider:
                 './/div[@class="search-result-productimage gridview"]/div/a').get_attribute(
                 "href")
             # 限制爬取详情信息的数量，只爬取item_detail_max条
-            if item_range < PAGE_DETAIL_MAX:
+            if item_range <= PAGE_DETAIL_MAX:
                 item_detail = getitemdetai(id_href)
             else:
                 item_detail = {'brand': '-', 'category': '-', 'highlights': '-'}
@@ -70,25 +76,39 @@ class WalmartSpider:
             #     shop_name = 'none'
 
             wal_id = id_href[id_href.rfind('/') + 1:]
-            data = [item_range, wal_id, id_href, name, price, star, reviews, page_id, item_detail['store'], main_image,
+            data = [item_range, wal_id, id_href, name, price, star, reviews, cur_page, main_image,
                     item_detail['brand'], item_detail['category'], item_detail['highlights']]
             mult_data.append(data)
 
-        time.sleep(1)
+        print(mult_data)
+
+        time.sleep(random.randint(1, 3))
+        self.url_queue.task_done()
+        return cur_page
 
     def exec_task_finished(self, result):
-        print("result:", result)
-        print("执行任务完成")
+        if result != 0:
+            print("第{}页数据采集完成:".format(result))
+        else:
+            print("第{}页数据采集失败:".format(result))
         self.pool.apply_async(self.exec_task, callback=self.exec_task_finished)
 
     def run(self):
+        self.generate_url()
         for i in range(5):
-            pool.apply_async(self.exec_task_finished, callback=self.exec_task_finished)
-        url_queue.join()
+            self.pool.apply_async(self.exec_task, callback=self.exec_task_finished)
+
+        time.sleep(1)
+        self.url_queue.join()
+        print("第{}页爬取完成:".format(PAGE))
 
 
 indexes = ['Range', 'Id', 'Url', 'Name', 'Price', 'Star', 'Review', 'Page', 'Shop name', 'Main image url', 'brand',
            'category', 'highlights']
-print(mult_data)
-write_csv(indexes, mult_data, FILE_NAME)
-browser.quit()
+# print(mult_data)
+# write_csv(indexes, mult_data, FILE_NAME)
+# browser.quit()
+
+if __name__ == '__main__':
+    walmart = WalmartSpider()
+    walmart.run()

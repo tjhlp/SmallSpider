@@ -6,7 +6,7 @@ def getitemdetai(html):
     options = webdriver.ChromeOptions()
     # 切换User-Agent
     options.add_argument(
-        'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
     options.add_argument('--headless')  # 开启无界面模式
     options.add_argument('--disable-gpu')  # 禁用gpu，解决一些莫名的问题  有界面注释这两行
     # 导入驱动程序
@@ -37,7 +37,7 @@ def getitemdetai(html):
 
     item = {'category': breadcrumbs, 'brand': item_brand, 'highlights': highlights, 'store': item_store}
 
-    print(item)
+    # print(item)
     browser1.quit()
     return item
 

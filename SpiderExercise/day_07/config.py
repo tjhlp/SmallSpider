@@ -4,7 +4,7 @@
 # page = int(input("请输入获取页数："))
 
 SEARCH_NAME = "led stage light"
-PAGE = 1
+PAGE = 4
 # 存储的文件名
 FILE_NAME = '1008-' + SEARCH_NAME + '.csv'
 # 页面路径样本（按照关键词）
@@ -17,4 +17,4 @@ HTML = 'https://www.walmart.com/search/?cat_id=0&page={}&ps=40&query={}'
 # html = 'https://www.walmart.com/browse/musical-instruments/par-cans/7796869_3896240_1725737?page={}'
 
 
-PAGE_DETAIL_MAX = 20
+PAGE_DETAIL_MAX = 5

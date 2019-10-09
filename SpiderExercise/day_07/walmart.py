@@ -8,8 +8,8 @@ import re
 import random
 from queue import Queue
 from walmart_details import getitemdetai
-from config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX
-from init import browser
+from config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX, INDEXES
+from init import _init_Chrome
 from tool import write_csv, generate_url, count_time
 
 
@@ -25,8 +25,11 @@ class WalmartSpider:
         }
         # 专门存放 url 容器
         self.url_queue = Queue()
+        # 存放数据
+        self.res_data = Queue()
 
     def generate_url(self):
+        """生成url容器"""
         url_list = generate_url(HTML, PAGE, SEARCH_NAME)
         for url in url_list:
             self.url_queue.put(url)
@@ -34,6 +37,7 @@ class WalmartSpider:
     @count_time
     def exec_task(self):
         get_data = self.url_queue.get()
+        browser = _init_Chrome()
         cur_page = get_data[0]
         url = get_data[1]
         print('第{}页开始采集数据'.format(cur_page))
@@ -79,9 +83,9 @@ class WalmartSpider:
             data = [item_range, wal_id, id_href, name, price, star, reviews, cur_page, main_image,
                     item_detail['brand'], item_detail['category'], item_detail['highlights']]
             mult_data.append(data)
-
-        print(mult_data)
-
+        browser.quit()
+        set_data = {str(cur_page): mult_data}
+        self.res_data.put(set_data)
         time.sleep(random.randint(1, 3))
         self.url_queue.task_done()
         return cur_page
@@ -93,21 +97,25 @@ class WalmartSpider:
             print("第{}页数据采集失败:".format(result))
         self.pool.apply_async(self.exec_task, callback=self.exec_task_finished)
 
+    def save_data(self):
+        mult_data = []
+        res_dict = {}
+        while self.res_data.empty() is False:
+            get_data = self.res_data.get().popitem()
+            res_dict[get_data[0]] = get_data[1]
+        for i in range(1, PAGE+1):
+            mult_data.append(res_dict[i] )
+        write_csv(INDEXES, mult_data, FILE_NAME)
+
     def run(self):
         self.generate_url()
         for i in range(5):
             self.pool.apply_async(self.exec_task, callback=self.exec_task_finished)
-
         time.sleep(1)
         self.url_queue.join()
         print("第{}页爬取完成:".format(PAGE))
+        self.save_data()
 
-
-indexes = ['Range', 'Id', 'Url', 'Name', 'Price', 'Star', 'Review', 'Page', 'Shop name', 'Main image url', 'brand',
-           'category', 'highlights']
-# print(mult_data)
-# write_csv(indexes, mult_data, FILE_NAME)
-# browser.quit()
 
 if __name__ == '__main__':
     walmart = WalmartSpider()

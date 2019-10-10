@@ -51,7 +51,6 @@ class WalmartSpider:
         browser.execute_script("var q=document.documentElement.scrollTop=100000")
         li_list = browser.find_elements_by_xpath('//ul[@class="search-result-gridview-items four-items"]/li')
         for li in li_list:
-            item_range += 1
             name = li.find_element_by_xpath('.//div[@class="search-result-product-title gridview"]/a').get_attribute(
                 "title")
             try:
@@ -103,8 +102,9 @@ class WalmartSpider:
         while self.res_data.empty() is False:
             get_data = self.res_data.get().popitem()
             res_dict[get_data[0]] = get_data[1]
-        for i in range(1, PAGE+1):
-            mult_data.append(res_dict[i] )
+        print(res_dict)
+        for i in range(1, PAGE + 1):
+            mult_data.append(str(res_dict[i]))
         write_csv(INDEXES, mult_data, FILE_NAME)
 
     def run(self):

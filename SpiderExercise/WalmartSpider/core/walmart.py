@@ -80,7 +80,7 @@ class WalmartSpider:
 
             wal_id = id_href[id_href.rfind('/') + 1:]
             data = [item_range, wal_id, id_href, name, price, star, reviews, cur_page, main_image,
-                    item_detail['brand'], item_detail['category'], item_detail['highlights']]
+                    item_detail['brand'], item_detail['category'], item_detail['highlights'], SEARCH_NAME]
             mult_data.append(data)
         browser.quit()
         set_data = {str(cur_page): mult_data}

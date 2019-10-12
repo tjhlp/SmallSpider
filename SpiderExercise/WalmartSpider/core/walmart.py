@@ -7,10 +7,10 @@ import time
 import re
 import random
 from queue import Queue
-from walmart_details import getitemdetai
-from config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX, INDEXES
-from init import _init_Chrome
-from tool import write_csv, generate_url, count_time
+from core.walmart_details import getitemdetai
+from core.config import SEARCH_NAME, FILE_NAME, PAGE, HTML, PAGE_DETAIL_MAX, INDEXES
+from core.init import _init_Chrome
+from core.tool import write_csv, generate_url, count_time
 
 
 class WalmartSpider:

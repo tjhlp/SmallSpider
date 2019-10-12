@@ -1,0 +1,198 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Walmart数据</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <template>
+        <el-table :data="tableData" stripe style="width: 100%">
+          <el-table-column
+            prop="item_rank"
+            label="排名"
+            width="100"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column prop="item_id" label="ID" width="150" height="50">
+          </el-table-column>
+          <el-table-column
+            prop="item_name"
+            label="名称"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_price"
+            label="价格"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_star"
+            label="评价"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_review"
+            label="评价数量"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_page"
+            label="页数"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_shop"
+            label="店铺"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_main_image"
+            label="主图"
+            width="150"
+            height="50"
+          >
+            <el-image
+              style="width: 100px; height: 100px"
+              :src="item_main_image"
+              :fit="fit"
+            ></el-image>
+          </el-table-column>
+          <el-table-column
+            prop="item_brand"
+            label="品牌"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_category"
+            label="类目"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+          <el-table-column
+            prop="item_highlights"
+            label="卖点"
+            width="150"
+            height="50"
+          >
+          </el-table-column>
+        </el-table>
+      </template>
+    </div>
+  </body>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: function() {
+        return {
+          tableData: [
+            {
+              item_rank: "20",
+              item_id: "560961491",
+              item_url:
+                "https://www.walmart.com/ip/CHAUVET-6SPOT-6-Head-LED-Effect-RGB-Stage-Spot-Light-Bar-w-Case-25-DMX-Cables/560961491",
+              item_name:
+                "CHAUVET 6SPOT 6 Head LED Effect RGB Stage Spot Light Bar w/Case & 25' DMX Cables",
+              item_price: "$291.99 ",
+              item_star: "0",
+              item_review: "0",
+              item_page: "1",
+              item_shop: "VM Express",
+              item_main_image:
+                "https://i5.walmartimages.com/asr/ab9c369f-f5e4-4bb1-9fda-b5a1643a9b39_1.48fc8234a60248d3ef16fd2f51af5e81.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff",
+              item_brand: "-",
+              item_category: "-"
+            },
+            {
+              item_rank: "21",
+              item_id: "475991859",
+              item_url:
+                "https://www.walmart.com/ip/Christmas-Birthday-Black-Ktaxon-Party-Light-AC90V-240V-Stage-Lamp-Home-UV-Festival-LED-Xmas-27W-Bar-Wedding-Purple-Club-9Pcs-Halloween/475991859",
+              item_name:
+                "Ktaxon AC90V-240V 27W 9Pcs LED UV Bar Black Light Purple Wedding Stage Lamp Xmas Party for Birthday Wedding Bar Club Home Christmas Halloween Festival",
+              item_price: "$28.99 ",
+              item_star: "0",
+              item_review: "0",
+              item_page: "1",
+              item_shop: "Ktaxon",
+              item_main_image:
+                "https://i5.walmartimages.com/asr/cd4e16e0-d684-4a00-80de-c760faf4b96a_1.bb107456120f982b930f5d9ee5187958.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff",
+              item_brand: "-",
+              item_category: "-"
+            },
+            {
+              item_rank: "22",
+              item_id: "473784296",
+              item_url:
+                "https://www.walmart.com/ip/Stage-Light-Bar-6-3W-LED-Wall-Wash-Lighting-for-Disco-DJ-KTV-Club-Party-Wedding-110V-US-Plug/473784296",
+              item_name:
+                "Stage Light Bar 6 * 3W LED Wall Wash Lighting for Disco DJ KTV Club Party Wedding 110V US Plug",
+              item_price: '"$17.58'
+            },
+            {
+              item_rank: "23",
+              item_id: "435614382",
+              item_url:
+                "https://www.walmart.com/ip/9-Colors-Stage-Light-LED-Stage-Light-Dancing-Party-USB-Mini-Light-Remote-Control-Light-for-KTV-Stage-Disco-Ballroom-Bar-Club-Party-Wedding/435614382",
+              item_name:
+                "9 Colors Stage Light LED Stage Light Dancing Party USB Mini Light Remote Control Light for KTV, Stage, Disco, Ballroom, Bar, Club, Party, Wedding",
+              item_price: "$17.88 ",
+              item_star: "0",
+              item_review: "0",
+              item_page: "1",
+              item_shop: "Hilitand",
+              item_main_image:
+                "https://i5.walmartimages.com/asr/5ac611da-5d65-4ece-8cab-01e173e535c9_1.b28a25f638d05e3bb4c340edaaf02fdd.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff",
+              item_brand: "-",
+              item_category: "-"
+            },
+            {
+              item_rank: "24",
+              item_id: "933950507",
+              item_url:
+                "https://www.walmart.com/ip/Head-Moving-Stage-Light-90W-Double-Sides-RGBW-LED-Stage-Light-15-21CH-DMX512-Controlled-Disco-Party-Effect-Light-US-Plug-110V-Black/933950507",
+              item_name:
+                "Head Moving Stage Light,90W Double Sides RGBW LED Stage Light 15/21CH DMX512 Controlled Disco Party Effect Light US Plug 110V (Black)",
+              item_price: "$78.66 ",
+              item_star: "0",
+              item_review: "0",
+              item_page: "1",
+              item_shop: "YOSOO SPORTS",
+              item_main_image:
+                "https://i5.walmartimages.com/asr/3517a22a-1911-4c8d-b079-cb2da045ca91_1.e3bab6528dc767f9268415275deb30ae.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff",
+              item_brand: "-",
+              item_category: "-"
+            }
+          ]
+        };
+      }
+    });
+  </script>
+</html>

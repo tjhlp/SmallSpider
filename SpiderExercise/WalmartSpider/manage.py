@@ -14,10 +14,10 @@ def create_app(config_name):
     db = SQLAlchemy()
     db.init_app(app)
 
-    return app
+    return app, db
 
 
-app = create_app("development")
+app, db = create_app("development")
 
 if __name__ == '__main__':
     app.run()

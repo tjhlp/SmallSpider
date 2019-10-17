@@ -1,6 +1,16 @@
-from manage import db
-INDEXES = ['Rank', 'Id', 'Url', 'Name', 'Price', 'Star', 'Review', 'Page', 'Shop_name', 'Main_Image_url', 'Brand',
-           'Category', 'Highlights', 'Key_World', 'Time']
+# from manage import db
+
+
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+# 配置数据库的地址
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@13.114.205.255:3306/walmart'
+# 跟踪数据库的修改，不建议开启
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 class Information(db.Model):
     # 给表重新定义一个名称，默认名称是类名的小写，比如该类默认的表名是user。
@@ -24,3 +34,21 @@ class Information(db.Model):
 
     def __repr__(self):
         return "Goods: %s %s %s %s" % (self.Rank, self.Name, self.Price, self.Page)
+
+
+db.drop_all()
+db.create_all()
+
+
+@app.route('/')
+def index():
+    return "hahah"
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+

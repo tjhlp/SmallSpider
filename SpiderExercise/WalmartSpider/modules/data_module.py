@@ -7,7 +7,7 @@ from manage import db
 # app = Flask(__name__)
 #
 # # 配置数据库的地址
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@13.114.205.255:3306/walmart'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:123456@13.114.205.255:3306/walmart'
 # # 跟踪数据库的修改，不建议开启
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # db = SQLAlchemy(app)

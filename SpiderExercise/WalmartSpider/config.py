@@ -13,7 +13,7 @@ class Config(object):
     LOG_LEVEL = logging.DEBUG
 
     # 数据库的配置信息
-    SQLALCHEMY_DATABASE_URI = "mysql://root:mysql@" + IP + ":3306/wal_info"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:123456@" + IP + ":3306/walmart"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
     # redis配置

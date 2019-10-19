@@ -22,7 +22,7 @@ app, db = create_app("development")
 
 @app.route('/')
 def index():
-    from modules.data_module import Information
+    from models import Information
     # 初始化 user 模型，并设置数据并添加到数据库
     info = Information()
     data = info.query.all()

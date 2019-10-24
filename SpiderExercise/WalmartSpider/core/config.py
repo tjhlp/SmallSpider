@@ -17,6 +17,7 @@ INDEXES = ['Rank', 'Id', 'Url', 'Name', 'Price', 'Star', 'Review', 'Page', 'Shop
            'Category', 'Highlights', 'Key_World', 'Time']
 """
 搜索关键词不用改，搜索分类的话需要更换网址，第一步注释掉38行和52行的代码，打开44行和54行的代码然后填入分类的网址
+
 """
 # 页面路径样本（按照分类）
 # html = 'https://www.walmart.com/browse/musical-instruments/par-cans/7796869_3896240_1725737?page={}'

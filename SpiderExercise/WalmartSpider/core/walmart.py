@@ -13,7 +13,7 @@ from core.init import _init_Chrome
 from core.tool import write_csv, generate_url, count_time
 
 
-class WalmartSpider:
+class WalmartSpider(object):
 
     def __init__(self):
 
